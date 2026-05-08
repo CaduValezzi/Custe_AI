@@ -1,6 +1,14 @@
 :root {
   --txtsize-medium: 1.8rem;
-  --txtsize-small: calc(var(--txtsize-medium) * 0.875);
-  --txtsize-large: calc(var(--txtsize-medium) * 1.25);
+  /* 15,75px */
+  --txtsize-small: calc(var(--txtsize-medium) * 0.875); 
+  /* 18px */
   --txtsize: var(--txtsize-medium);
+  /* 22,5px */
+  --txtsize-large: calc(var(--txtsize-medium) * 1.25); 
+  /* 32,04px */
+  --txtsize-xlarge: calc(var(--txtsize-medium) * 1.78);
+  /* 44,88px */
+  --txtsize-xxlarge: calc(var(--txtsize-medium) * 2.45);
 }
+

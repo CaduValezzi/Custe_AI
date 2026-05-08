@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import '../styles/_colors.scss';
+@import '../styles/_fonts.scss';
+@import '../styles/_variables.scss';
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  background-color: var(--color-white);
+  /* color: var(--foreground); */
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+}
+h1{
+    font-size: var(--txtsize-xxlarge);
+    font-family: var(--font-montserrat), sans-serif;
+    color: var(--color-black);
+    font-weight: 700;
+
+} 
+p {
+    font-size: var(--txtsize);
+    font-family: var(--font-montserrat), sans-serif;
+    color: var(--color-black);
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+b {
+    font-size: var(--txtsize);
+    font-family: var(--font-montserrat), sans-serif;
+    font-weight: 700;
+}
+i {
+    font-size: var(--txtsize);
+    font-family: var(--font-montserrat), sans-serif;
+    font-style: italic;
+}
