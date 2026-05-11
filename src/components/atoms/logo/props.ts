@@ -1,11 +1,22 @@
 export interface LogoProps {
-    /*
-    Tamanho do logo, caso seja 'small', o logo terá um tamanho menor, caso contrário, terá um tamanho padrão
+    /*    
+    Tamanho do logo, caso seja small, o logo terá um height de 5rem e width de 6rem, caso seja medium, o logo terá um height de 10rem e width de 12rem, caso seja large, o logo terá um height de 15rem e width de 18rem
     */
-    size?: string | 'logo' ;
+    size?: 'small' | 'medium' | 'large';
+    /*    
+    Tamanho da altura do logo, caso seja definido, irá sobrescrever o tamanho definido pelo size, caso contrário, o tamanho do logo será definido pelo size
+    */
+    sizeHeight?: string ;
+    /*    
+    Tamanho da largura do logo, caso seja definido, irá sobrescrever o tamanho definido pelo size, caso contrário, o tamanho do logo será definido pelo size
+    */
+    sizeWidth?: string ;
     /*  
-    Fonte do logo, caso seja 'primary', o logo terá a fonte primária, caso contrário, terá a fonte secundária
+    Alt do logo
     */
-    alt: string;
+    alt?: string;
+    /*  
+    Fonte do logo
+    */
     src?: string;
 }   

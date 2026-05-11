@@ -29,7 +29,7 @@ export const Menu = (): ReactNode => {
     <>
         <div className={`${S.menu__section} ${S.menu__section__notscrolled}`}>
             <div className={S.menu__container}>
-                <Logo alt="Logo" size="logo" />
+                <Logo alt="Logo" size="small" />
                 <nav className={S.menu__nav}>
                   <ul className={S.menu__list}>
                     <li className={S.menu__item}><a href="#home" rel="noopener noreferrer" >Home</a></li>
