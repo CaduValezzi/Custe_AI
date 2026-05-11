@@ -1,6 +1,6 @@
 import { type ReactNode } from "react";
 import S from "./styles.module.scss";
-import {type SectionProps } from "./props";
+import { type SectionProps } from "./props";
 
 export const Section = ({ children, isColored = false }: SectionProps): ReactNode => {
   return (
