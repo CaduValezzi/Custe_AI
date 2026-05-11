@@ -6,11 +6,11 @@ export interface LogoProps {
     /*    
     Tamanho da altura do logo, caso seja definido, irá sobrescrever o tamanho definido pelo size, caso contrário, o tamanho do logo será definido pelo size
     */
-    sizeHeight?: string ;
+    sizeHeight?: string;
     /*    
     Tamanho da largura do logo, caso seja definido, irá sobrescrever o tamanho definido pelo size, caso contrário, o tamanho do logo será definido pelo size
     */
-    sizeWidth?: string ;
+    sizeWidth?: string;
     /*  
     Alt do logo
     */

@@ -3,6 +3,8 @@ import { type ReactNode } from "react";
 import S from "./styles.module.scss";
 import { useEffect } from "react";
 import { Logo } from "@/components/atoms/logo";
+import { Picture } from "@/components/atoms/picture";
+import imagem from "../../../../public/images/logo/logo_small.png";
 
 
 export const Menu = (): ReactNode => {

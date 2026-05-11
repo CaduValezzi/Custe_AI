@@ -1,9 +1,13 @@
-import { ReactNode } from "react";
-import { PictureProps } from "./props";
+import { type PictureProps } from "./props";
+import S from "./styles.module.scss";
 
-export const Picture = ({ src, alt }: PictureProps): ReactNode => {
+export const Picture = ({ 
+  src, 
+  alt, 
+  sizeHeight, 
+  sizeWidth }: PictureProps) => {
   return (
     // eslint-disable-next-line @next/next/no-img-element
-    <img src={src} alt={alt} />
+    <img className={S.picture} src={src} alt={alt} style={{ height: sizeHeight, width: sizeWidth }} />
   );
 };
