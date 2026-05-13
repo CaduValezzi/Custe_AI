@@ -1,10 +1,11 @@
+import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
 
 export const FeatureTemplate = () => {
   return (
     <>
     <Section isColored>
-      <h2>Feature Title</h2>
+      <Title>Funcionalidades</Title>
       <p>Feature description goes here.</p>
     </Section>
     </>

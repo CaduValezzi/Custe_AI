@@ -6,10 +6,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 100;
         &__notscrolled{
             background: transparent;
-            backdrop-filter: blur(10px);
-            color: var(--color-black);
+            // backdrop-filter: blur(10px);
+            color: var(--color-white);
             transition: all 0.3s ease;
         }
         &__scrolled{
