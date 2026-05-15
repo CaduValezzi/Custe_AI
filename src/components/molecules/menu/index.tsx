@@ -37,9 +37,9 @@ export const Menu = (): ReactNode => {
                 <Logo alt="Logo" size="small" />
                 <nav className={S.menu__nav}>
                   <ul className={S.menu__list}>
-                    <li className={S.menu__item}><a href="#home" rel="noopener noreferrer" >Home</a></li>
-                    <li className={S.menu__item}><a href="#feature" rel="noopener noreferrer" >Funcionalidades</a></li>
-                    <li className={S.menu__item}><a href="#contact" rel="noopener noreferrer" >Contact</a></li>
+                    <li className={S.menu__item}><a href="#home" rel="noopener noreferrer" >Home<div className={S.menu__item__underline}/></a></li>
+                    <li className={S.menu__item}><a href="#feature" rel="noopener noreferrer" >Funcionalidades<div className={S.menu__item__underline}/></a></li>
+                    <li className={S.menu__item}><a href="#contact" rel="noopener noreferrer" >Contact<div className={S.menu__item__underline}/></a></li>
                   </ul>
                 </nav>
             </div>
