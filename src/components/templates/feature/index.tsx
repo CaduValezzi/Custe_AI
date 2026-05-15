@@ -4,7 +4,7 @@ import { Section } from "@/components/organisms/section";
 export const FeatureTemplate = () => {
   return (
     <>
-    <Section isColored>
+    <Section id="feature" isColored>
       <Title>Funcionalidades</Title>
       <p>Feature description goes here.</p>
     </Section>

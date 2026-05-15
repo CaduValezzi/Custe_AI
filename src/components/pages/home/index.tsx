@@ -8,6 +8,7 @@ import { Menu } from "@/components/molecules/menu";
 import { Section } from "@/components/organisms/section";
 import { HeroTemplate } from "@/components/templates/hero";
 import S from "./styles.module.scss";
+import { FeatureTemplate } from "@/components/templates/feature";
 
 export const HomeTemplate = () => {
   const sectionsRef = useRef<HTMLDivElement[]>([]);
@@ -66,6 +67,14 @@ export const HomeTemplate = () => {
           <h1 className={S.Title}>Welcome to Custe AI</h1>
           <p>Your personal assistant for managing your finances.</p>
         </Section>
+      </div>
+      <div
+        ref={(el) => {
+          if (el) sectionsRef.current[4] = el;
+        }}
+        className="relative z-50"
+      >
+        <FeatureTemplate />
       </div>
     </>
   );
