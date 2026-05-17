@@ -12,10 +12,8 @@ export const layeredPinning = (
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
-    //   end: "+=100%",
       pin: true,
       pinSpacing: false,
-    //   scrub: true,
     });
   });
 

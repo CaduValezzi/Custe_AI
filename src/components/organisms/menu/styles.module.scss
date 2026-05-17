@@ -10,13 +10,14 @@
         border-bottom: 0.15rem solid var(--color-dark-blue);
         color: var(--color-black);
         transition: all 0.3s ease;
+        margin-bottom: 10rem;
         
-        // &__notscrolled{
-        //     transform: translateY(0);
-        // }
+        &__hidden{
+            transform: translateY(-9rem);
+        }
 
-        &__scrolled{
-            transform: translateY(-100%);
+        &__visible{
+            transform: none;
         }
         
     }

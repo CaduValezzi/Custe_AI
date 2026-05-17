@@ -6,7 +6,7 @@ export const HeroTemplate = () => {
     <>
       <div className="hero__section">
         <div className="hero__container" >
-          <Picture src={HeroImage.src} sizeHeight="90vh" sizeWidth="100vw"/>
+          <Picture src={HeroImage.src} sizeHeight="100vh" sizeWidth="100vw"/>
         </div>
       </div>
     </>
