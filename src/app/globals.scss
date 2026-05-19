@@ -37,6 +37,7 @@ html{
     -ms-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
   font-family: var(--font-montserrat), sans-serif;
