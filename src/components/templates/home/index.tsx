@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { layeredPinning } from "./helpers";
-import { HeroTemplate } from "@/components/templates/hero";
-import { FeatureTemplate } from "@/components/templates/feature";
+import { HeroTemplate } from "@/components/templates/home/hero";
+import { FeatureTemplate } from "@/components/templates/home/feature";
 import { Menu } from "@/components/organisms/menu";
 
 export const HomeTemplate = () => {

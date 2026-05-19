@@ -1,5 +1,5 @@
 import { Picture } from "@/components/atoms/picture";
-import HeroImage from "../../../../public/images/pexels-weekendplayer-186461.jpg";
+import HeroImage from "@/public/images/pexels-weekendplayer-186461.jpg";
 import S from "./styles.module.scss"
 
 export const HeroTemplate = () => {
