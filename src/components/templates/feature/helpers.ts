@@ -13,14 +13,40 @@ export const titleAnimation = (
       opacity: 0,
     },
     {
-      x: 0,
-      opacity: 1,
+      x: -7,
+      duration: 1,
+      opacity: 0.35,
       ease: "power3.out",
       scrollTrigger: {
         trigger: title,
         start: "top 50%",
-        end: "bottom 30%",
-        scrub: true,
+      },
+    }
+  );
+
+  return () => {
+    tween.kill();
+  };
+};
+
+export const cardsAnimation = (
+  cards: HTMLDivElement[]
+) => {
+  const tween = gsap.fromTo(
+    cards,
+    {
+      y: 80,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: cards[0],
+        start: "top 85%",
       },
     }
   );
