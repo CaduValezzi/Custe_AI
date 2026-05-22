@@ -15,7 +15,7 @@ export const titleAnimation = (
     {
       x: -7,
       duration: 1,
-      opacity: 0.35,
+      opacity: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: title,
