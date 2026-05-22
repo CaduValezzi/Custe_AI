@@ -1,7 +1,7 @@
 .hero {
   &__section {
     min-height: 100vh;
-    background-color: var(--color-light-blue);
+    background-color: var(--color-black);
 
     display: flex;
     align-items: center;
@@ -13,7 +13,7 @@
   &__container {
     width: 100%;
 
-    max-width: 1400px;
+    max-width: 1300px;
     margin: 0 auto;
 
     padding: 0 6rem;
@@ -22,40 +22,47 @@
   &__content {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
     gap: 6rem;
+    text-align: center;
   }
 
   &__info {
-    flex: 1;
-
-    font-family: 'Montserrat', sans-serif;
-
+    font-weight: 700;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 2rem;
   }
 
   &__headline {
-    font-size: clamp(3rem, 6vw, 5.6rem);
-    font-weight: 700;
+    font-family: var(--font-title);
+    font-size: clamp(4.2rem, 7vw, 8rem);
+    font-weight: bold;
     color: var(--color-white);
 
+    letter-spacing: -0.04em;
     line-height: 1.1;
-
-    max-width: 700px;
+    margin-bottom: 2.4rem;
+      &__span {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
   }
 
   &__description {
-    font-size: 2.2rem;
+    font-family: var(--font-text);
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-white);
 
-    max-width: 600px;
+    max-width: 500px;
 
-    opacity: 0.8;
+    opacity: 0.6;
   }
 
   &__actions {
@@ -84,7 +91,6 @@
   }
 
   &__visual {
-    flex: 1;
 
     display: flex;
     justify-content: center;

@@ -1,5 +1,3 @@
-import { Picture } from "@/components/atoms/picture";
-import HeroImage from "@/public/images/pexels-weekendplayer-186461.jpg";
 import S from "./styles.module.scss"
 
 export const HeroTemplate = () => {
@@ -11,11 +9,11 @@ export const HeroTemplate = () => {
 
             <div className={S.hero__info}>
               <h1 className={S.hero__headline}>
-                Controle todos os custos das suas APIs em um só lugar.
+                Pare de perder dinheiro<br/>com <span className={S.hero__headline__span}>APIs que você<br/>nem lembra que usa</span>
               </h1>
 
               <p className={S.hero__description}>
-                Monitore gastos, receba alertas e visualize o consumo da sua stack em tempo real.
+                O Custe.AI centraliza todos os seus gastos com APIs de terceiros em um unico dashboard — com alertas automaticos, historico e projecao de custos.
               </p>
 
               <div className={S.hero__actions}>
@@ -24,9 +22,7 @@ export const HeroTemplate = () => {
               </div>
             </div>
 
-            <div className={S.hero__visual}>
-               <Picture src={HeroImage.src} sizeHeight="50vh" sizeWidth="100vw"/>
-            </div>
+
 
           </div>
         </div>
