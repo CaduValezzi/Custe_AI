@@ -9,7 +9,7 @@
         background-color: #00101ee0;
         backdrop-filter: blur(1rem);
         border-bottom: 0.15rem solid var(--navy);
-        color: var(--white);
+        color: var(--color-text);
         transition: all 0.3s ease;
         
         &__hidden{
@@ -62,7 +62,7 @@
         text-transform: uppercase;
         width: 20rem;
         height: 9rem;
-        color: var(--white);
+        color: var(--color-text);
         background: var(--grad);
         margin-left: auto;
         

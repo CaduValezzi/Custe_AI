@@ -1,8 +1,6 @@
 .feature {
   padding: 10rem 0;
 
-  background-color: var(--white);
-
   &__container {
     width: 100%;
     max-width: 1400px;
@@ -17,14 +15,12 @@
 
   &__title {
     font-size: clamp(4rem, 8vw, 8rem);
+    font-family: var(--font-title);
 
     font-weight: 700;
     line-height: 0.9;
 
-    color: var(--color-black);
-    
-
-    text-transform: uppercase;
+    color: var(--color-text);
 
     margin-bottom: 2rem;
   }
@@ -36,7 +32,7 @@
     font-weight: 500;
     line-height: 1.7;
 
-    color: var(--color-black);
+    color: var(--color-text);
     opacity: 30%;
   }
 

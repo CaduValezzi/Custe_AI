@@ -40,7 +40,7 @@
     font-family: var(--font-title);
     font-size: clamp(4.2rem, 7vw, 8rem);
     font-weight: bold;
-    color: var(--white);
+    color: var(--color-text);
 
     letter-spacing: -0.04em;
     line-height: 1.1;
@@ -58,7 +58,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     line-height: 1.6;
-    color: var(--white);
+    color: var(--color-text);
 
     max-width: 500px;
 
@@ -78,14 +78,14 @@
     color: var(--navy);
     button{
         // border: 0.2rem solid var(--navy);
-        background-color: var(--white);
+        background-color: var(--color-text);
         border-radius: 1rem;
         padding: 0.5rem 2rem;
         cursor: pointer;
         transition: ease-in-out 200ms;
         &:hover{
             background-color: var(--navy);
-            color: var(--white);
+            color: var(--color-text);
         }
     }
   }
