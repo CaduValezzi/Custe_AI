@@ -1,7 +1,7 @@
 .menu{
     &__section{
         width: 100vw;
-        height: 8rem;
+        height: 7rem;
         position: fixed;
         display: flex;
         align-items: center;
@@ -27,11 +27,11 @@
         display: flex;
         align-items: center;
         padding: 0rem 5rem;
-        margin-left: 30rem;
+        margin-left: 5rem;
         
     }
     &__logo{
-        filter: drop-shadow(0 0 8px var(--cyan));
+        filter:  brightness(1.5);
     }
     &__list{
         display: flex;
