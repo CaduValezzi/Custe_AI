@@ -41,7 +41,7 @@ export const Menu = (): ReactNode => {
     <>
         <div className={`${S.menu__section} `}>
            <div className={`${S.menu__container}`}>
-               <Logo alt="Logo" size="small" />
+               <Logo className={S.menu__logo} alt="Logo" size="small" />
                <nav className={S.menu__nav}>
                  <ul className={S.menu__list}>
                    <li className={S.menu__item}><a href="#home" rel="noopener noreferrer" >Home<div className={S.menu__item__underline}/></a></li>
