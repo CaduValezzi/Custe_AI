@@ -1,7 +1,7 @@
 .menu{
     &__section{
         width: 100vw;
-        height: 7rem;
+        height: 7.5rem;
         position: fixed;
         display: flex;
         align-items: center;
@@ -13,7 +13,7 @@
         transition: all 0.3s ease;
         
         &__hidden{
-            transform: translateY(-9rem);
+            transform: translateY(-7rem);
         }
 
         &__visible{
