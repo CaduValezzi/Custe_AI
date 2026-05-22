@@ -19,4 +19,8 @@ export interface LogoProps {
     Fonte do logo
     */
     src?: string;
+    /*  
+    Classe para personalização do componente
+    */
+    className?: string;
 }   
