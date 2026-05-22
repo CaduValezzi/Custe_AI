@@ -7,8 +7,8 @@
         align-items: center;
         z-index: 100;
         background-color: var(--color-black);
-        border-bottom: 0.15rem solid var(--color-dark-blue);
-        color: var(--color-white);
+        border-bottom: 0.15rem solid var(--navy);
+        color: var(--white);
         transition: all 0.3s ease;
         
         &__hidden{
@@ -61,7 +61,7 @@
         text-transform: uppercase;
         width: 20rem;
         height: 9rem;
-        color: var(--color-white);
+        color: var(--white);
         background: var(--grad);
         margin-left: auto;
         
