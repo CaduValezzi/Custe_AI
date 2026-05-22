@@ -6,9 +6,9 @@
         display: flex;
         align-items: center;
         z-index: 100;
-        background-color: var(--color-white);
+        background-color: var(--color-black);
         border-bottom: 0.15rem solid var(--color-dark-blue);
-        color: var(--color-black);
+        color: var(--color-white);
         transition: all 0.3s ease;
         
         &__hidden{
@@ -34,21 +34,21 @@
         gap: 5rem;
         margin-left: 10rem;
         font-size: 1.4rem;
-        font-family: 'Roboto';
+        font-family: var(--font-text-2);
         font-weight: 400;
         cursor: pointer;
         text-transform: uppercase;
     }
     &__item{
-        transition: color 0.3s ease;
+        transition: ease 0.3s ease;
         &__underline{
             width: 0%;
             height: 0.15rem;
-            background-color: var(--color-dark-blue);
+            background: var(--grad);
             transition: width 0.5s ease;
         }
         :hover{
-            color: var(--color-dark-blue);
+            color: var(--color-dark-grey);
             .menu__item__underline{
                 width: 100%;
             }
@@ -62,7 +62,7 @@
         width: 20rem;
         height: 9rem;
         color: var(--color-white);
-        background-color: var(--color-dark-blue);
+        background: var(--grad);
         margin-left: auto;
         
     }
