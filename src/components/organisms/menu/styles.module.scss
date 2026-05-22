@@ -6,7 +6,8 @@
         display: flex;
         align-items: center;
         z-index: 100;
-        background-color: var(--color-black);
+        background-color: #00101ee0;
+        backdrop-filter: blur(1rem);
         border-bottom: 0.15rem solid var(--navy);
         color: var(--white);
         transition: all 0.3s ease;
@@ -48,7 +49,7 @@
             transition: width 0.5s ease;
         }
         :hover{
-            color: var(--color-dark-grey);
+            color: var(--blue);
             .menu__item__underline{
                 width: 100%;
             }
