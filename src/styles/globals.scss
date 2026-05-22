@@ -38,18 +38,18 @@ html{
     overflow-x: hidden;
 }
 body {
-  font-family: var(--font-montserrat), sans-serif;
+  font-family: var(--font-text);
   
 }
 h1{
     font-size: var(--txtsize-xxlarge);
-    color: var(--color-black);
+    color: var(--color-text);
     font-weight: 700;
 
 } 
 p {
     font-size: var(--txtsize);
-    color: var(--color-black);
+    color: var(--color-text);
     font-weight: 400;
     line-height: 1.5rem;
 }

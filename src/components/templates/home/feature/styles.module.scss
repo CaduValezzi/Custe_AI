@@ -1,7 +1,6 @@
 .feature {
   padding: 10rem 0;
-
-  background-color: var(--color-white);
+  border-top: 0.1rem solid var(--border);
 
   &__container {
     width: 100%;
@@ -9,6 +8,7 @@
 
     margin: 0 auto;
     padding: 0 6rem;
+    
   }
 
   &__header {
@@ -17,14 +17,12 @@
 
   &__title {
     font-size: clamp(4rem, 8vw, 8rem);
+    font-family: var(--font-title);
 
     font-weight: 700;
     line-height: 0.9;
 
-    color: var(--color-black);
-    
-
-    text-transform: uppercase;
+    color: var(--color-text);
 
     margin-bottom: 2rem;
   }
@@ -36,7 +34,7 @@
     font-weight: 500;
     line-height: 1.7;
 
-    color: var(--color-black);
+    color: var(--color-text);
     opacity: 30%;
   }
 
@@ -49,7 +47,7 @@
   }
 
   &__card {
-    background-color: white;
+    background-color: var(--white);
 
     padding: 3rem;
 
