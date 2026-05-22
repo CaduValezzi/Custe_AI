@@ -1,8 +1,14 @@
-@import './fonts/_montserrat.scss';
-@import './fonts/_roboto.scss';
+@import url('./fonts/_dmmono.scss');
+@import url('./fonts/_dmserifdisplay.scss');
+@import url('./fonts/_figtree.scss');
+@import url('./fonts/_roboto.scss');
+
 
 :root {
-  --font-montserrat: 'Montserrat';
-  --font-roboto: 'Roboto';
-  --font-abril-fatface: 'Abril Fatface';
+  
+  --font-title: 'DM Serif Display';
+  --font-mocked: 'DM Mono';
+  --font-text: 'Figtree';
+  --font-text-2: 'Roboto';
+  
 }
