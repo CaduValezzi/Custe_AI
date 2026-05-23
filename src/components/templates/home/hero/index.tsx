@@ -17,8 +17,8 @@ export const HeroSection = () => {
               </p>
 
               <div className={S.hero__actions}>
-                <button className={S.hero__actions__especial}>Começar agora!</button>
-                <button>Ver dashboard</button>
+                <button className={S.hero__actions__especial}>Ver como funciona →</button>
+                <button className={S.hero__actions__ghost} >Ver dashboard</button>
               </div>
             </div>
 

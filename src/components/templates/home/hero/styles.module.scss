@@ -2,20 +2,16 @@
   &__section {
     min-height: 100vh;
     background-color: var(--bg);
-
     display: flex;
     align-items: center;
-
     overflow: hidden;
     position: relative;
   }
 
   &__container {
     width: 100%;
-
     max-width: 1300px;
     margin: 0 auto;
-
     padding: 0 6rem;
   }
 
@@ -23,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 6rem;
     text-align: center;
   }
@@ -41,7 +36,6 @@
     font-size: clamp(4.2rem, 7vw, 8rem);
     font-weight: bold;
     color: var(--color-text);
-
     letter-spacing: -0.04em;
     line-height: 1.1;
     margin-bottom: 2.4rem;
@@ -59,39 +53,45 @@
     font-weight: 400;
     line-height: 1.6;
     color: var(--color-text);
-
     max-width: 500px;
-
     opacity: 0.6;
   }
 
   &__actions {
     display: flex;
     align-items: center;
-
     gap: 2rem;
-
     margin-top: 1rem;
-
     font-size: 1.6rem;
     font-weight: 500;
-    color: var(--navy);
+    
     button{
-        // border: 0.2rem solid var(--navy);
-        background-color: var(--color-text);
-        border-radius: 1rem;
-        padding: 0.5rem 2rem;
-        cursor: pointer;
-        transition: ease-in-out 200ms;
-        &:hover{
-            background-color: var(--navy);
-            color: var(--color-text);
-        }
+      background-color: transparent;
+      border-radius: 1rem;
+      padding: 1.4rem 3.2rem; 
+      cursor: pointer;
+      transition: ease-in-out 200ms;
+      color: var(--color-text);
+    }
+    &__especial{
+    background: var(--grad);
+    color: var(--white);
+    border: none;
+    &:hover{
+      transform: translateY(-0.5rem);
+      opacity: 0.9;
     }
   }
+  &__ghost{
+    border: 0.1rem solid var(--border2);
+    &:hover{
+        background-color: #eef3ff13;
+      }
+  }
+  }
+  
 
   &__visual {
-
     display: flex;
     justify-content: center;
     align-items: center;
