@@ -1,6 +1,6 @@
 import S from "./styles.module.scss"
 
-export const HeroTemplate = () => {
+export const HeroSection = () => {
   return (
     <>
       <section className={S.hero__section}>
@@ -17,12 +17,10 @@ export const HeroTemplate = () => {
               </p>
 
               <div className={S.hero__actions}>
-                <button>Começar agora!</button>
+                <button className={S.hero__actions__especial}>Começar agora!</button>
                 <button>Ver dashboard</button>
               </div>
             </div>
-
-
 
           </div>
         </div>
