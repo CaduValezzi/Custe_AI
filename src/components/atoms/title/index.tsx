@@ -10,11 +10,9 @@ export const Title = forwardRef<
   TitleProps
 >(({ children, className }, ref) => {
   return (
-    <div className={S.title__container}>
-        <h1 ref={ref} className={className}>
+    <h1 ref={ref} className={`${S.title} ${className}`}>
           {children}
-        </h1>
-    </div>
+    </h1>
   );
 });
 

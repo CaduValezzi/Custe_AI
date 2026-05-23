@@ -1,12 +1,8 @@
-.title__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    &__text{
-        font-size: 20rem;
-        font-weight: 700;
-        color: var(--color-text);
-        margin-bottom: 1rem;
-        padding-top: 8rem;
-    }
+.title{
+    font-family: var(--font-title);
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+    max-width: 640px;
 }
