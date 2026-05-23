@@ -3,8 +3,8 @@ import { EyebrowProps } from "./props";
 
 export const Eyebrow = ({ children }: EyebrowProps) => {
   return (
-    <h2 className={S.eyebrow}>
+    <div className={S.eyebrow}>
       {children}
-    </h2>
+    </div>
   );
 };
