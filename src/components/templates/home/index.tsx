@@ -2,8 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { layeredPinning } from "./helpers";
-import { HeroTemplate } from "@/components/templates/home/hero";
-import { FeatureTemplate } from "@/components/templates/home/feature";
+import { HeroSection } from "@/components/templates/home/hero";
+import { ProblemSection } from "@/components/templates/home/feature";
 import { Menu } from "@/components/organisms/menu";
 
 export const HomeTemplate = () => {
@@ -27,7 +27,7 @@ export const HomeTemplate = () => {
         }}
         className="relative z-1"
       >
-        <HeroTemplate />
+        <HeroSection />
       </div>
 
       <div
@@ -36,7 +36,7 @@ export const HomeTemplate = () => {
         }}
         className="relative z-2"
       >
-        <FeatureTemplate />
+        <ProblemSection />
       </div>
     </>
   );
