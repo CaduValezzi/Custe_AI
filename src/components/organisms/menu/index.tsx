@@ -41,12 +41,12 @@ export const Menu = (): ReactNode => {
     <>
         <div className={`${S.menu__section} `}>
            <div className={`${S.menu__container}`}>
-               <Logo className={S.menu__logo} alt="Logo" size="small" />
+               <a href="#" rel="noopener noreferrer"><Logo className={S.menu__logo} alt="Logo" size="small" /></a>
                <nav className={S.menu__nav}>
                  <ul className={S.menu__list}>
-                   <li className={S.menu__item}><a href="#home" rel="noopener noreferrer" >Home<div className={S.menu__item__underline}/></a></li>
-                   <li className={S.menu__item}><a href="#feature" rel="noopener noreferrer" >Funcionalidades<div className={S.menu__item__underline}/></a></li>
-                   <li className={S.menu__item}><a href="#contact" rel="noopener noreferrer" >Contact<div className={S.menu__item__underline}/></a></li>
+                   <li className={S.menu__item}><a href="#problem" rel="noopener noreferrer" >Problema<div className={S.menu__item__underline}/></a></li>
+                   <li className={S.menu__item}><a href="#feature" rel="noopener noreferrer" >Solução<div className={S.menu__item__underline}/></a></li>
+                   <li className={S.menu__item}><a href="#" rel="noopener noreferrer" >Contact<div className={S.menu__item__underline}/></a></li>
                  </ul>
                </nav>
            </div>
