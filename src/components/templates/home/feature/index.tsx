@@ -10,7 +10,7 @@ import S from "./styles.module.scss";
 
 
 
-export const FeatureTemplate = () => {
+export const ProblemSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
@@ -26,7 +26,7 @@ export const FeatureTemplate = () => {
 }, []);
 
   return (
-    <Section id="feature">
+    <Section id="problem">
       <div className={S.feature}>
         <div className={S.feature__container}>
           <div className={S.feature__header}>
