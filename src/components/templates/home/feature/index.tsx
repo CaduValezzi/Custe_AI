@@ -1,13 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-
 import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
 import { features } from "./const"
-
 import { titleAnimation, cardsAnimation } from "./helpers";
-
+import { Eyebrow } from "@/components/atoms/eyebrow";
 import S from "./styles.module.scss";
 
 
@@ -18,9 +16,7 @@ export const FeatureTemplate = () => {
 
   useEffect(() => {
   if (!titleRef.current) return;
-
   const titleCleanup = titleAnimation(titleRef.current);
-
   const cardsCleanup = cardsAnimation(cardsRef.current);
 
   return () => {
@@ -34,11 +30,11 @@ export const FeatureTemplate = () => {
       <div className={S.feature}>
         <div className={S.feature__container}>
           <div className={S.feature__header}>
+            <Eyebrow >O problema</Eyebrow>
             <Title
               ref={titleRef}
-              className={S.feature__title}
             >
-              Funcionalidades
+              Seus gastos com APIs estao por toda parte
             </Title>
 
             <p className={S.feature__subtitle}>
