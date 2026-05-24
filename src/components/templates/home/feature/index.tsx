@@ -6,6 +6,7 @@ import { Section } from "@/components/organisms/section";
 import { features } from "./const"
 import { titleAnimation, cardsAnimation } from "./helpers";
 import { Eyebrow } from "@/components/atoms/eyebrow";
+import { Sub } from "@/components/atoms/sub"
 import S from "./styles.module.scss";
 
 
@@ -37,10 +38,9 @@ export const ProblemSection = () => {
               Seus gastos com APIs estao por toda parte
             </Title>
 
-            <p className={S.feature__subtitle}>
-              Tudo o que você precisa para controlar,
-              monitorar e reduzir os custos da sua stack.
-            </p>
+            <Sub>
+                Pequenas e medias empresas gastam horas todo mes tentando entender o que consumiram — e muitas vezes descobrem tarde demais.
+            </Sub>
           </div>
 
           <div className={S.feature__grid}>

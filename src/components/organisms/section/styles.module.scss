@@ -1,5 +1,7 @@
 .section {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--bg);
+  position: relative;
+  z-index: 1;
+  padding: 100px 6%;
+  max-width: 1200px;
+  margin: 0 auto;
 }

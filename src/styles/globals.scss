@@ -39,7 +39,17 @@ html{
 }
 body {
   font-family: var(--font-text);
-  
+  background-color: var(--bg);
+  &::before {
+    content: '';
+    position: fixed; 
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(80,40,240,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(80,40,240,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none; z-index: 0;
+  }
 }
 h1{
     font-size: var(--txtsize-xxlarge);

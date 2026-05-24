@@ -30,14 +30,7 @@ export const HomeTemplate = () => {
         <HeroSection />
       </div>
 
-      <div
-        ref={(el) => {
-          if (el) sectionsRef.current[1] = el;
-        }}
-        className="relative z-2"
-      >
-        <ProblemSection />
-      </div>
+      <ProblemSection />
     </>
   );
 };
