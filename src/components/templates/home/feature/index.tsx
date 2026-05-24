@@ -7,6 +7,7 @@ import { features } from "./const"
 import { titleAnimation, cardsAnimation } from "./helpers";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
+import { ProblemCard } from "@/components/molecules/problemcard";
 import S from "./styles.module.scss";
 
 
@@ -45,22 +46,14 @@ export const ProblemSection = () => {
 
           <div className={S.feature__grid}>
             {features.map((feature, index) => (
-              <div
-                key={feature.title}
-                className={S.feature__card}
-                ref={(el) => {
+              
+              <ProblemCard
+              ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-              >
-                <h3 className={S.feature__cardTitle}>
-                  {feature.title}
-                </h3>
-
-                <p className={S.feature__cardDescription}>
-                  {feature.description}
-                </p>
-              </div>
+              key={feature.title} title={feature.title} content={feature.description} />
             ))}
+  
           </div>
         </div>
       </div>
