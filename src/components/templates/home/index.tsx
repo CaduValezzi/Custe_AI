@@ -21,14 +21,7 @@ export const HomeTemplate = () => {
     <>
       <Menu />
 
-      <div
-        ref={(el) => {
-          if (el) sectionsRef.current[0] = el;
-        }}
-        className="relative z-1"
-      >
-        <HeroSection />
-      </div>
+      <HeroSection />
 
       <ProblemSection />
     </>
