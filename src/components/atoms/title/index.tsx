@@ -10,9 +10,9 @@ export const Title = forwardRef<
   TitleProps
 >(({ children, className }, ref) => {
   return (
-    <h1 ref={ref} className={`${S.title} ${className}`}>
+    <h2 ref={ref} className={`${S.title} ${className}`}>
           {children}
-    </h1>
+    </h2>
   );
 });
 
