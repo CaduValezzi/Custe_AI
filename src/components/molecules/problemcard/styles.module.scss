@@ -1,0 +1,28 @@
+.problemcard{
+    background: var(--surface);
+    border: 0.1rem solid var(--border2);
+    border-radius: 1rem;
+    padding: 2.8rem;
+    transition: border-color 0.25s, transform 0.25s;
+    &:hover{
+        border-color:rgba(80,40,240,0.5);
+        transform:translateY(-3px);
+    }
+    &__icon{
+        font-size: 2.8rem;
+        margin-bottom: 1.4rem;
+        display: block;
+
+    }
+    &__title{
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+        color: var(--text);
+    }
+    &__content{
+        font-size: 1.4rem;
+        color: var(--muted);
+        line-height: 1.65;
+    }
+}
