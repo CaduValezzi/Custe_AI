@@ -17,19 +17,24 @@ html{
     -ms-text-size-adjust: none;
     -webkit-text-size-adjust: none;
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 body {
   font-family: var(--font-text);
   background-color: var(--bg);
+  color: var(--color-text); 
+  font-size: 1.6rem; 
+  line-height: 1.6; 
+  overflow-x: hidden;
+  
   &::before {
     content: '';
     position: fixed; 
     inset: 0;
     background-image:
-      linear-gradient(rgba(170, 153, 240, 0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgbargba(170, 153, 240, 0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
-    pointer-events: none; z-index: 0;
+      linear-gradient(rgba(255, 255, 255, 0.02) 0.1rem, transparent 0.1rem),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 0.1rem, transparent 0.1rem);
+    background-size: 6rem 6rem;
+    pointer-events: none; 
+    z-index: 0;
   }
 }
