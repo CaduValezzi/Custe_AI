@@ -13,7 +13,7 @@ export const titleAnimation = (
       opacity: 0,
     },
     {
-      x: -7,
+      x: 0,
       duration: 1,
       opacity: 1,
       ease: "power3.out",
