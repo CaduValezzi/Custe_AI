@@ -1,4 +1,5 @@
 import S from "./styles.module.scss"
+import { Demodash } from "@/components/molecules/demodash";
 
 export const HeroSection = () => {
   return (
@@ -23,7 +24,9 @@ export const HeroSection = () => {
             </div>
 
           </div>
+          <Demodash />
         </div>
+
       </section>
     </>
   )
