@@ -6,7 +6,12 @@ export const HeroSection = () => {
     <>
       <section className={S.hero__section}>
         <div className={S.hero__container}>
+          <div className={S.hero__badge}>
+              <span className={S.hero__badge__dot}></span>
+              FIAP 2026
+            </div>
           <div className={S.hero__content}>
+            
 
             <div className={S.hero__info}>
               <h1 className={S.hero__headline}>

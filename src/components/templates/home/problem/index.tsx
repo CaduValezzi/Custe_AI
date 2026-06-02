@@ -36,10 +36,10 @@ export const ProblemSection = () => {
             <Title
               ref={titleRef}
             >
-              Seus gastos com APIs estao por toda parte
+              Seus gastos com APIs estão por toda parte
             </Title>
             <Sub>
-                Pequenas e medias empresas gastam horas todo mes tentando entender o que consumiram — e muitas vezes descobrem tarde demais.
+                Pequenas e medias empresas gastam horas todo mês tentando entender o que consumiram — e muitas vezes descobrem tarde demais.
             </Sub>
           </div>
 
