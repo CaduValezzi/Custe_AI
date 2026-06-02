@@ -38,7 +38,6 @@ export const ProblemSection = () => {
             >
               Seus gastos com APIs estao por toda parte
             </Title>
-
             <Sub>
                 Pequenas e medias empresas gastam horas todo mes tentando entender o que consumiram — e muitas vezes descobrem tarde demais.
             </Sub>
@@ -51,7 +50,7 @@ export const ProblemSection = () => {
               ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-              key={feature.title} title={feature.title} content={feature.description} />
+              key={feature.title} icon={feature.icon} title={feature.title} content={feature.content} />
             ))}
   
           </div>

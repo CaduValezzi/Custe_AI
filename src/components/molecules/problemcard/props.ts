@@ -1,6 +1,10 @@
 export interface ProblemCardProps {
      /** 
-     * Conteúdo do título
+     * Icone do card
+    */
+    icon: string;
+     /** 
+     * Título do card
     */
     title: string;
     /** 
