@@ -46,7 +46,7 @@ export const cardsAnimation = (
       ease: "power3.out",
       scrollTrigger: {
         trigger: cards[0],
-        start: "top 85%",
+        start: "top 50%",
       },
     }
   );
