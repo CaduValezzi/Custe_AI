@@ -28,10 +28,10 @@ export const ProblemSection = () => {
 }, []);
 
   return (
-    <Section id="features">
-      <div className={S.feature}>
-        <div className={S.feature__container}>
-          <div className={S.feature__header}>
+    <Section id="problems">
+      <div className={S.problem}>
+        <div className={S.problem__container}>
+          <div className={S.problem__header}>
             <Eyebrow >O problema</Eyebrow>
             <Title
               ref={titleRef}
@@ -43,7 +43,7 @@ export const ProblemSection = () => {
             </Sub>
           </div>
 
-          <div className={S.feature__grid}>
+          <div className={S.problem__grid}>
             {problems.map((problem, index) => (
               
               <ProblemCard
