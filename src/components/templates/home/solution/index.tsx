@@ -9,6 +9,7 @@ import { Sub } from "@/components/atoms/sub"
 import S from "./styles.module.scss";
 import { Features } from "@/components/atoms/featureslist";
 import { VisualGraph } from "@/components/molecules/visualgraph";
+import { VisualAlerts } from "@/components/molecules/visualalerts";
 
 
 
@@ -51,12 +52,26 @@ export const SolutionSection = () => {
               <Features.Item title="Upload via CSV">
                 Faça upload das faturas de qualquer provedor. O sistema normaliza e associa os registros automaticamente.
               </Features.Item>
-              <Features.Item title="Graficos em tempo real">
+              <Features.Item title="Gráficos em tempo real">
                 Pizza, linha por periodo, e KPIs de crescimento e projeção &mdash; tudo atualizado apos cada upload.
               </Features.Item>
             </Features>
           
             <VisualGraph />
+
+            <VisualAlerts />
+
+            <Features start={4}>
+              <Features.Item title="Alertas automáticos">
+                Configure thresholds por API (ex: 80% do limite). Quando atingido, recebe notificacao in-app e por e-mail &mdash; antes de estourar.
+              </Features.Item>
+              <Features.Item title="Controle por perfil">
+                Administrador, Analista e Desenvolvedor &mdash; cada um acessa so o que precisa, com permissoes granulares.
+              </Features.Item>
+              <Features.Item title="Comparação de provedores">
+                Visualize lado a lado o custo de APIs similares como AWS vs Azure e tome decisoes baseadas em dados reais.
+              </Features.Item>
+            </Features>
           </div>
         </div>
       </div>
