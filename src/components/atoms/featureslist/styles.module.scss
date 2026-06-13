@@ -1,0 +1,46 @@
+.feature {
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2.4rem;
+    }
+
+    &__item {
+        display: flex;
+        gap: 1.6rem;
+        align-items: flex-start;
+        counter-increment: list-item;
+
+        &::before {
+            content: counter(list-item, decimal-leading-zero);
+            font-size: 1.2rem;
+            font-weight: 500;
+            font-family: var(--font-mocked);
+            color: var(--accent);
+            min-width: 3.2rem;
+            height: 3.2rem;
+            border-radius: 0.8rem;
+            background: var(--grad);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            
+        }
+    }
+
+    &__text {
+        h4 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.4rem;
+        }
+        p {
+            font-size: 1.4rem;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+    }
+}
