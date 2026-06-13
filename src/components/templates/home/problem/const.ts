@@ -1,4 +1,4 @@
-export const features = [
+export const problems = [
   {
     icon: "📂",
     title: "Dashboard Centralizado",

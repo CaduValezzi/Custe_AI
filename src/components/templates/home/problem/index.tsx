@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
-import { features } from "./const"
+import { problems } from "./const"
 import { titleAnimation, cardsAnimation } from "./helpers";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
@@ -28,7 +28,7 @@ export const ProblemSection = () => {
 }, []);
 
   return (
-    <Section id="problem">
+    <Section id="features">
       <div className={S.feature}>
         <div className={S.feature__container}>
           <div className={S.feature__header}>
@@ -44,13 +44,13 @@ export const ProblemSection = () => {
           </div>
 
           <div className={S.feature__grid}>
-            {features.map((feature, index) => (
+            {problems.map((problem, index) => (
               
               <ProblemCard
               ref={(el) => {
                   if (el) cardsRef.current[index] = el;
                 }}
-              key={feature.title} icon={feature.icon} title={feature.title} content={feature.content} />
+              key={problem.title} icon={problem.icon} title={problem.title} content={problem.content} />
             ))}
   
           </div>
