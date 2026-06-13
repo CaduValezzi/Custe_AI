@@ -1,0 +1,44 @@
+.feature-visual { 
+    background: var(--surface);
+    border: 0.1rem solid var(--border2);
+    border-radius: 2rem;
+    padding: 2.8rem;
+    min-height: 28rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.2rem;
+   }
+
+  .pie-wrap { 
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+   }
+  .pie-legend { 
+    display: flex;
+    flex-direction: column;
+    gap: 1.0rem;
+    flex: 1;
+   }
+   .legend-item { 
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    font-size: 1.3rem;
+   }
+  .legend-dot { 
+    width: .8rem;
+    height: .8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+   }
+   .legend-name { 
+    color: var(--muted);
+    flex: 1;
+   }
+   .legend-pct { 
+    font-family: var(--font-mocked);
+    font-size: 1.2rem;
+    color: var(--color-text);
+   }

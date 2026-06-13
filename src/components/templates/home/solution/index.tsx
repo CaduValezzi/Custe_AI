@@ -8,6 +8,7 @@ import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
 import S from "./styles.module.scss";
 import { Features } from "@/components/atoms/featureslist";
+import { VisualGraph } from "@/components/molecules/visualgraph";
 
 
 
@@ -55,28 +56,7 @@ export const SolutionSection = () => {
               </Features.Item>
             </Features>
           
-            <div className="pie-legend">
-              <div className="legend-item">
-                <div className="legend-dot" style={{ background: '#5028F0' }}></div>
-                <span className="legend-name">OpenAI</span>
-                <span className="legend-pct">38%</span>
-              </div>
-              <div className="legend-item">
-                <div className="legend-dot" style={{ background: '#1464C8' }}></div>
-                <span className="legend-name">AWS</span>
-                <span className="legend-pct">20%</span>
-              </div>
-              <div className="legend-item">
-                <div className="legend-dot" style={{ background: '#00B4A0' }}></div>
-                <span className="legend-name">Stripe</span>
-                <span className="legend-pct">13%</span>
-              </div>
-              <div className="legend-item">
-                <div className="legend-dot" style={{ background: '#6B82A8' }}></div>
-                <span className="legend-name">Outros</span>
-                <span className="legend-pct">29%</span>
-              </div>
-            </div>
+            <VisualGraph />
           </div>
         </div>
       </div>
