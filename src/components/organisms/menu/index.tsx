@@ -45,7 +45,7 @@ export const Menu = (): ReactNode => {
                <nav className={S.menu__nav}>
                  <ul className={S.menu__list}>
                    <li className={S.menu__item}><a href="#problem" rel="noopener noreferrer" >Problema<div className={S.menu__item__underline}/></a></li>
-                   <li className={S.menu__item}><a href="#feature" rel="noopener noreferrer" >Solução<div className={S.menu__item__underline}/></a></li>
+                   <li className={S.menu__item}><a href="#solution" rel="noopener noreferrer" >Solução<div className={S.menu__item__underline}/></a></li>
                    <li className={S.menu__item}><a href="#" rel="noopener noreferrer" >Contact<div className={S.menu__item__underline}/></a></li>
                  </ul>
                </nav>

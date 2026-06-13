@@ -28,7 +28,7 @@ export const ProblemSection = () => {
 }, []);
 
   return (
-    <Section id="problems">
+    <Section id="problem">
       <div className={S.problem}>
         <div className={S.problem__container}>
           <div className={S.problem__header}>
