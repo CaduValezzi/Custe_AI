@@ -1,0 +1,134 @@
+.authlayout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  &__left {
+    background: var(--surface);
+    border-right: 0.1rem solid var(--border2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 40rem;
+      height: 40rem;
+      background: radial-gradient(ellipse, rgba(80, 40, 240, 0.14) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 10%;
+      right: 5%;
+      width: 30rem;
+      height: 30rem;
+      background: radial-gradient(ellipse, rgba(0, 180, 160, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    &__content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      max-width: 44rem;
+      width: 100%;
+    }
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    text-decoration: none;
+
+    span {
+      font-family: var(--font-title);
+      font-size: 2.4rem;
+      color: var(--color-text);
+    }
+  }
+
+  &__tagline {
+    h2 {
+      font-family: var(--font-title);
+      font-size: clamp(2.8rem, 3.5vw, 4rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--color-text);
+      margin-bottom: 1.6rem;
+
+      span {
+        background: var(--grad);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+
+    &__value {
+      font-family: var(--font-mocked);
+      font-size: 2.8rem;
+      font-weight: 500;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    &__label {
+      font-size: 1.2rem;
+      color: var(--muted);
+      max-width: 14rem;
+      line-height: 1.4;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+
+    &__content {
+      width: 100%;
+      max-width: 40rem;
+    }
+  }
+}

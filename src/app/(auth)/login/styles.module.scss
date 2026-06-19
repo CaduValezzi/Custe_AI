@@ -1,0 +1,97 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    color: var(--color-text);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.8rem;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    color: var(--muted);
+  }
+
+  &__link {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__forgot {
+    font-size: 1.2rem;
+    color: var(--muted);
+    text-decoration: none;
+    text-align: right;
+    margin-top: -0.8rem;
+    transition: color 0.2s;
+
+    &:hover {
+      color: var(--color-text);
+    }
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    color: var(--muted);
+    font-size: 1.2rem;
+
+    &::before,
+    &::after {
+      content: '';
+      flex: 1;
+      height: 0.1rem;
+      background: var(--border2);
+    }
+  }
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: var(--font-text);
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s, gap 0.2s;
+
+    &:hover {
+      color: var(--color-text);
+    }
+
+    &__arrow {
+      font-size: 1.6rem;
+      transition: transform 0.2s;
+    }
+
+    &:hover &__arrow {
+      transform: translateX(-0.3rem);
+    }
+  }
+}
+
+

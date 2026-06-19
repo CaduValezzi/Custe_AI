@@ -1,9 +1,18 @@
-$desktop2560: 2560px;
-$desktop1920: 1920px;
-$desktop1440: 1440px;
-$desktop1280: 1280px;
-$desktop1024: 1024px;
-$tablet: 834px;
-$mobile: 600px;
-$ultrawide: 18 / 9;
-$mobile-md: 600px;
+// breakpoints.scss
+@mixin tablet {
+    @media (max-width: 834px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin desktop1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}

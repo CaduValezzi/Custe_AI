@@ -19,6 +19,9 @@
         &__visible{
             transform: none;
         }
+        @include mobile{
+            display: none;
+        }
         
     }
     &__container{
@@ -68,5 +71,9 @@
         color: var(--color-text);
         background: var(--grad);
         margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
     }
 }
