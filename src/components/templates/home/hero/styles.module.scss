@@ -65,7 +65,6 @@
     font-size: clamp(4.2rem, 7vw, 8rem);
     font-weight: bold;
     color: var(--color-text);
-    letter-spacing: -0.04em;
     line-height: 1.1;
       &__span {
       background: var(--grad);
@@ -99,6 +98,7 @@
       cursor: pointer;
       transition: ease-in-out 200ms;
       color: var(--color-text);
+      z-index: 0;
     }
     
       &__especial{
@@ -106,8 +106,7 @@
       color: var(--white);
       border: none;
         &:hover{
-          transform: translateY(-0.5rem);
-          opacity: 0.9;
+          opacity: 0.8;
         }
       }
     &__ghost{
