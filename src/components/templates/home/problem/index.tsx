@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
 import { problems } from "./const"
-import { titleAnimation, cardsAnimation } from "./helpers";
+import {cardsAnimation } from "./helpers";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
 import { ProblemCard } from "@/components/molecules/problemcard";
@@ -13,16 +13,13 @@ import S from "./styles.module.scss";
 
 
 export const ProblemSection = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
-  if (!titleRef.current) return;
-  const titleCleanup = titleAnimation(titleRef.current);
+  if (!cardsRef.current) return;
   const cardsCleanup = cardsAnimation(cardsRef.current);
 
   return () => {
-    titleCleanup();
     cardsCleanup();
   };
 }, []);
@@ -33,9 +30,7 @@ export const ProblemSection = () => {
         <div className={S.problem__container}>
           <div className={S.problem__header}>
             <Eyebrow >O problema</Eyebrow>
-            <Title
-              ref={titleRef}
-            >
+            <Title>
               Seus gastos com APIs estão por toda parte
             </Title>
             <Sub>

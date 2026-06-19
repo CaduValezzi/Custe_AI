@@ -14,12 +14,13 @@ export const titleAnimation = (
     },
     {
       y: 0,
-      duration: 0.5,
+      duration: 1,
       opacity: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: title,
-        start: "top 90%",
+        start: "50% bottom",
+        markers: true
       },
     }
   );
