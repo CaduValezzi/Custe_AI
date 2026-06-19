@@ -1,6 +1,7 @@
 import { type ReactNode } from "react";
 import S from "./styles.module.scss";
 import { Logo } from "@/components/atoms/logo";
+import Link from "next/link";
 
 interface AuthLayoutProps {
   children: ReactNode;
@@ -11,10 +12,10 @@ export const AuthLayout = ({ children }: AuthLayoutProps) => {
     <div className={S.authlayout}>
       <div className={S.authlayout__left}>
         <div className={S.authlayout__left__content}>
-          <a href="/" className={S.authlayout__brand}>
+          <Link href="/" className={S.authlayout__brand}>
             <Logo alt="Custe.AI" size="small" />
             <span>Custe.AI</span>
-          </a>
+          </Link>
           <div className={S.authlayout__tagline}>
             <h2>Controle inteligente dos seus<br /><span>gastos com APIs</span></h2>
             <p>Centralize, visualize e preveja seus custos com APIs em um unico lugar.</p>
