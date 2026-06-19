@@ -14,6 +14,7 @@ export const layeredPinning = (
       start: "top top",
       pin: true,
       pinSpacing: false,
+      markers: true
     });
   });
 

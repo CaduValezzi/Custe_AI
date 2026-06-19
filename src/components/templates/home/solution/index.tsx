@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
-import { titleAnimation, cardsAnimation } from "./helpers";
+import { titleAnimation } from "./helpers";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
 import S from "./styles.module.scss";
@@ -20,11 +20,9 @@ export const SolutionSection = () => {
   useEffect(() => {
   if (!titleRef.current) return;
   const titleCleanup = titleAnimation(titleRef.current);
-  const cardsCleanup = cardsAnimation(cardsRef.current);
 
   return () => {
     titleCleanup();
-    cardsCleanup();
   };
 }, []);
 

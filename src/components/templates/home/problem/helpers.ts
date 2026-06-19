@@ -9,17 +9,17 @@ export const titleAnimation = (
   const tween = gsap.fromTo(
     title,
     {
-      x: 500,
+      y: 80,
       opacity: 0,
     },
     {
-      x: 0,
-      duration: 1,
+      y: 0,
+      duration: 0.5,
       opacity: 1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: title,
-        start: "top 50%",
+        start: "top 90%",
       },
     }
   );
@@ -41,12 +41,12 @@ export const cardsAnimation = (
     {
       y: 0,
       opacity: 1,
-      duration: 1,
-      stagger: 0.2,
+      duration: 0.3,
+      stagger: 0.1,
       ease: "power3.out",
       scrollTrigger: {
         trigger: cards[0],
-        start: "top 50%",
+        start: "top 90%",
       },
     }
   );
