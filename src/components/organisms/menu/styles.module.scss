@@ -1,7 +1,7 @@
 .menu{
     &__section{
         width: 100vw;
-        height: 7.5rem;
+        height: 8rem;
         position: fixed;
         display: flex;
         align-items: center;
@@ -13,15 +13,13 @@
         transition: all 0.3s ease;
         
         &__hidden{
-            transform: translateY(-7rem);
+            transform: translateY(-100%);
         }
 
-        &__visible{
-            transform: none;
-        }
-        @include mobile{
-            display: none;
-        }
+        // &::after{
+        //     // margin-bottom: 10rem;
+        //     border: 20rem black transparent;
+        // }
         
     }
     &__container{
@@ -41,8 +39,8 @@
         gap: 5rem;
         margin-left: 10rem;
         font-size: 1.2rem;
-        font-family: var(--font-text-2);
-        font-weight: 400;
+        font-family: var(--font-text);
+        font-weight: 300;
         cursor: pointer;
         text-transform: uppercase;
     }
@@ -63,7 +61,7 @@
     }
     &__button{
         font-size: 1.2rem;
-        font-family: 'Roboto';
+        font-family: var(--font-text);
         font-weight: 400;
         text-transform: uppercase;
         width: 20rem;

@@ -12,35 +12,78 @@ export const Menu = (): ReactNode => {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
     useEffect(() => {
-        let lastScrollY: number = 0;
-        const menuSection = document.querySelector(`.${S.menu__section}`);
-        
-        const menuShow = () => {
-            const windowScrollY = window.scrollY;
-            if (windowScrollY > lastScrollY) {
-                menuSection?.classList.add(S.menu__section__hidden);
-            } else {
-                menuSection?.classList.remove(S.menu__section__hidden);
-            }
-            lastScrollY = windowScrollY;
-        };
-        const menuMouseOver = () => {
-            menuSection?.classList.add(S.menu__section__visible);
+    let lastScrollY = window.scrollY;
+
+    const menuSection = document.querySelector(`.${S.menu__section}`);
+
+    let isMouseOnMenu = false;
+    let isMouseAtTop = false;
+
+    const showMenu = () => {
+        menuSection?.classList.remove(S.menu__section__hidden);
+    };
+
+    const hideMenu = () => {
+        if (!isMouseOnMenu) {
+            menuSection?.classList.add(S.menu__section__hidden);
         }
-        const menuMouseOut = () => {
-            menuSection?.classList.remove(S.menu__section__visible);
+    };
+
+    const handleScroll = () => {
+        if (isMouseOnMenu) return;
+
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY < lastScrollY) {
+            // scroll para cima
+            showMenu();
+        } else if (currentScrollY > lastScrollY) {
+            // scroll para baixo
+            hideMenu();
         }
 
-        window.addEventListener("scroll", menuShow);
-        menuSection?.addEventListener("mouseover", menuMouseOver);
-        menuSection?.addEventListener("mouseout", menuMouseOut);
+        lastScrollY = currentScrollY;
+    };
 
-        return () => {
-            window.removeEventListener("scroll", menuShow);
-            menuSection?.removeEventListener("mouseover", menuMouseOver);
-            menuSection?.removeEventListener("mouseout", menuMouseOut);
-        };
-    }, []);
+    const handleMouseMove = (e: MouseEvent) => {
+        const atTop = e.clientY <= 50;
+
+        if (atTop && !isMouseAtTop) {
+            isMouseAtTop = true;
+            showMenu();
+        }
+
+        if (!atTop) {
+            isMouseAtTop = false;
+        }
+    };
+
+    const handleMenuEnter = () => {
+        isMouseOnMenu = true;
+        showMenu();
+    };
+
+    const handleMenuLeave = () => {
+        isMouseOnMenu = false;
+        if (!isMouseAtTop) {
+            hideMenu();
+        }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    menuSection?.addEventListener("mouseenter", handleMenuEnter);
+    menuSection?.addEventListener("mouseleave", handleMenuLeave);
+
+    return () => {
+        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener("mousemove", handleMouseMove);
+
+        menuSection?.removeEventListener("mouseenter", handleMenuEnter);
+        menuSection?.removeEventListener("mouseleave", handleMenuLeave);
+    };
+}, []);
 
   return (
     <>
