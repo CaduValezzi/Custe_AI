@@ -16,10 +16,6 @@
             transform: translateY(-100%);
         }
 
-        // &::after{
-        //     // margin-bottom: 10rem;
-        //     border: 20rem black transparent;
-        // }
         
     }
     &__container{
@@ -73,5 +69,41 @@
         align-items: center;
         justify-content: center;
         
+    }
+}
+
+@media (max-width: 426px) {
+    .menu{
+        &__section{
+            height: 100vh;
+            width: 100vw;
+            padding: 2rem 0;
+            display: flex;
+            flex-direction: column;
+        }
+        &__container{
+            padding: 0;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        &__logo{
+        margin-bottom: 2.4rem;
+        }
+        &__list{
+            gap: 2rem;
+            margin-left: 0;
+            font-size: 2.4rem;
+            text-align: center;
+            font-weight: 500;
+            display: flex;
+            flex-direction: column;
+        }
+        &__button{
+            width: 15rem;
+            font-size: 1rem;
+            margin-left: 0;
+            height: 4rem;
+        }
     }
 }

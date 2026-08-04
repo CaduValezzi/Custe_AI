@@ -1,13 +1,14 @@
 "use client"
 import Link from "next/link";
-import { type ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import S from "./styles.module.scss";
 import { useEffect } from "react";
 import { Logo } from "@/components/atoms/logo";
 
 
 export const Menu = (): ReactNode => {
-    const scrollTo = (id: string) => (e: React.MouseEvent) => {
+    const [width, setWidth] = useState(window.innerWidth);
+        const scrollTo = (id: string) => (e: React.MouseEvent) => {
         e.preventDefault();
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
@@ -15,6 +16,7 @@ export const Menu = (): ReactNode => {
     let lastScrollY = window.scrollY;
 
     const menuSection = document.querySelector(`.${S.menu__section}`);
+    
 
     let isMouseOnMenu = false;
     let isMouseAtTop = false;
@@ -70,8 +72,13 @@ export const Menu = (): ReactNode => {
         }
     };
 
+    const resizeWindow = () => {
+        setWidth(window.innerWidth);
+    };
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("resize", resizeWindow);
 
     menuSection?.addEventListener("mouseenter", handleMenuEnter);
     menuSection?.addEventListener("mouseleave", handleMenuLeave);
@@ -82,14 +89,18 @@ export const Menu = (): ReactNode => {
 
         menuSection?.removeEventListener("mouseenter", handleMenuEnter);
         menuSection?.removeEventListener("mouseleave", handleMenuLeave);
+
+        window.removeEventListener("resize", resizeWindow);
     };
 }, []);
+
+const isMobile = width <= 426;
 
   return (
     <>
         <div className={`${S.menu__section} `}>
            <div className={`${S.menu__container}`}>
-               <a href="#" onClick={scrollTo("hero")}><Logo className={S.menu__logo} alt="Logo" size="small" /></a>
+               <a href="#" onClick={scrollTo("hero")}>{isMobile ? <Logo className={S.menu__logo} alt="Logo" size="medium" /> : <Logo className={S.menu__logo} alt="Logo" size="small" />}</a>
                <nav className={S.menu__nav}>
                  <ul className={S.menu__list}>
                    <li className={S.menu__item}>
@@ -104,7 +115,7 @@ export const Menu = (): ReactNode => {
                     </li>
                     <li className={S.menu__item}>
                         <a href="#" onClick={scrollTo("problem")}>
-                            Contact<div className={S.menu__item__underline}/>
+                            .<div className={S.menu__item__underline}/>
                         </a>
                     </li>
                  </ul>
