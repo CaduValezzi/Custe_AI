@@ -16,3 +16,11 @@
     gap: 1.6rem;
   }
 }
+
+@media (max-width: 426px) {
+  .problem {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

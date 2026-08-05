@@ -16,3 +16,11 @@
     gap: 6rem;
   }
 }
+
+@media (max-width: 426px) {
+  .feature {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}
