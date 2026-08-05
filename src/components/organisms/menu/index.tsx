@@ -7,12 +7,13 @@ import { Logo } from "@/components/atoms/logo";
 
 
 export const Menu = (): ReactNode => {
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState<number>(0);
         const scrollTo = (id: string) => (e: React.MouseEvent) => {
         e.preventDefault();
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
     useEffect(() => {
+    setWidth(window.innerWidth);
     let lastScrollY = window.scrollY;
 
     const menuSection = document.querySelector(`.${S.menu__section}`);

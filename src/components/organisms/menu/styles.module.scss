@@ -77,11 +77,13 @@
         &__section{
             height: 100vh;
             width: 100vw;
-            padding: 2rem 0;
+            padding: 0;
             display: flex;
+            justify-content: center;
             flex-direction: column;
         }
         &__container{
+            height: 50%;
             padding: 0;
             margin-left: 0;
             display: flex;
@@ -101,7 +103,8 @@
         }
         &__button{
             width: 15rem;
-            font-size: 1rem;
+            font-size: 2.4rem;
+            font-weight: 500;
             margin-left: 0;
             height: 4rem;
         }
