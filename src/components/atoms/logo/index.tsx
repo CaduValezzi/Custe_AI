@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoSrc from "../../../../public/images/logo/logo_small.png";
+import LogoSrc from "@/public/images/logo/logo_small.png";
 import { type LogoProps } from './props';
 
 export const Logo = ({ src = LogoSrc.src, alt = "Custe AI", sizeHeight, sizeWidth, size, className }: LogoProps)=> {
