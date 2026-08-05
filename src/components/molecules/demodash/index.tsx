@@ -1,8 +1,13 @@
+import { forwardRef } from 'react';
 import S from './style.module.scss';
+import { dashboardAnimation } from './animation';
 
-export const Demodash = () => {
+export const Demodash = forwardRef<HTMLDivElement>((_, ref) => {
+  const demoDashRef = ref ?? ((node: HTMLDivElement | null) => {
+    if (node) dashboardAnimation(node);
+  });
   return (
-    <div className={S.dashboardMockup}>
+    <div ref={demoDashRef} className={S.dashboardMockup}>
       <div className={S.browserBar}>
         <div className={S.browserDots}>
           <span className={S.dotR}></span>
@@ -79,4 +84,4 @@ export const Demodash = () => {
     </div>
   </div>
   );
-};
+});
