@@ -16,13 +16,14 @@ export const Menu = (): ReactNode => {
     };
     useEffect(() => {
     setWidth(window.innerWidth);
-    let lastScrollY = window.scrollY;
-
     const menuSection = document.querySelector(`.${S.menu__section}`);
-    
-
+    const menuIcon = document.querySelector(`.${S.menu__icon}`);
+    const menuContainer = document.querySelector(`.${S.menu__container}`);
+    const isDesktop = window.innerWidth > 426;
+    let lastScrollY = window.scrollY;
     let isMouseOnMenu = false;
     let isMouseAtTop = false;
+
 
     const showMenu = () => {
         menuSection?.classList.remove(S.menu__section__hidden);
@@ -33,6 +34,18 @@ export const Menu = (): ReactNode => {
             menuSection?.classList.add(S.menu__section__hidden);
         }
     };
+    const toggleMenuMobile = () => {
+        menuSection?.classList.toggle(S.menu__section__hiddenMobile);
+        menuIcon?.classList.toggle(S.menu__icon__show);
+    }
+    const showMenuMobile = () => {
+        menuSection?.classList.remove(S.menu__section__hiddenMobile);
+        menuIcon?.classList.remove(S.menu__icon__show);
+    };
+    const hideMenuMobile = () => {
+        menuSection?.classList.add(S.menu__section__hiddenMobile);
+        menuIcon?.classList.add(S.menu__icon__show);
+    }
 
     const handleScroll = () => {
         if (isMouseOnMenu) return;
@@ -79,21 +92,33 @@ export const Menu = (): ReactNode => {
         setWidth(window.innerWidth);
     };
 
+
+    if (isDesktop) {
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("resize", resizeWindow);
-
     menuSection?.addEventListener("mouseenter", handleMenuEnter);
     menuSection?.addEventListener("mouseleave", handleMenuLeave);
+    }else{
+        window.addEventListener("resize", resizeWindow);
+        menuIcon?.addEventListener("click", toggleMenuMobile);
+        menuContainer?.addEventListener("click", hideMenuMobile);
+    }
+
+    
 
     return () => {
+        if (isDesktop) {
         window.removeEventListener("scroll", handleScroll);
         window.removeEventListener("mousemove", handleMouseMove);
-
         menuSection?.removeEventListener("mouseenter", handleMenuEnter);
         menuSection?.removeEventListener("mouseleave", handleMenuLeave);
+        }else{
+            window.removeEventListener("resize", resizeWindow);
+            menuIcon?.removeEventListener("click", toggleMenuMobile);
+            menuContainer?.removeEventListener("click", hideMenuMobile);
+        }
 
-        window.removeEventListener("resize", resizeWindow);
+        
     };
 }, []);
 
@@ -101,9 +126,9 @@ const isMobile = width <= 426;
 
   return (
     <>
-        <div className={`${S.menu__section} `}>
-           <Picture className={S.menu__icon} src={iconSrc.src} alt="Menu" />
-           <div className={`${S.menu__container}`}>
+        <div className={`${S.menu__section} ${isMobile ? S.menu__section__hiddenMobile : '' }`}>
+           <Picture className={`${S.menu__icon} ${isMobile ? S.menu__icon__show : '' }`} src={iconSrc.src} alt="Menu" />
+           <div className={`${S.menu__container} `}>
                <a href="#" onClick={scrollTo("hero")}>{isMobile ? <Logo className={S.menu__logo} alt="Logo" size="medium" /> : <Logo className={S.menu__logo} alt="Logo" size="small" />}</a>
                <nav className={S.menu__nav}>
                  <ul className={S.menu__list}>
@@ -126,7 +151,6 @@ const isMobile = width <= 426;
                </nav>
                <Link href="/login" className={S.menu__button}>Login</Link>
            </div>
-           
         </div >
     </>
   );

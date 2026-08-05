@@ -19,7 +19,8 @@
         
     }
     &__container{
-        width: 130rem;
+        width: 100%;
+        max-width: 130rem;
         height: 100%;
         display: flex;
         align-items: center;
@@ -82,14 +83,19 @@
             padding: 0;
             display: flex;
             flex-direction: column;
+            justify-content: start;
             // transform: translateX(-100%);
+            &__hiddenMobile{
+                transform: translateX(-100%);
+            }
         }
         &__container{
             height: 50%;
             padding: 0;
-            margin-left: 0;
+            margin: auto 0;
             display: flex;
             flex-direction: column;
+
         }
         &__logo{
         margin-bottom: 2.4rem;
@@ -101,7 +107,8 @@
             text-align: center;
             font-weight: 500;
             display: flex;
-            flex-direction: column;
+            flex-direction: column; 
+            margin-bottom: 2rem;
         }
         &__button{
             width: 15rem;
@@ -114,14 +121,12 @@
             display: flex; 
             align-self: flex-end;
             z-index: 100;
-            top: 2rem;
-            right: 2rem;
             height: 4rem;
             cursor: pointer;
-            // transform: translateX(100%);
             margin: 2rem;
-            &:hover{
-                color: var(--blue);
+            transition: transform 0.3s ease;
+            &__show{
+                transform: translateX(200%);
             }
             
         }
