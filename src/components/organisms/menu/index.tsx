@@ -19,7 +19,7 @@ export const Menu = (): ReactNode => {
     const menuSection = document.querySelector(`.${S.menu__section}`);
     const menuIcon = document.querySelector(`.${S.menu__icon}`);
     const menuContainer = document.querySelector(`.${S.menu__container}`);
-    const isDesktop = window.innerWidth > 426;
+    const isDesktop = window.innerWidth > 441;
     let lastScrollY = window.scrollY;
     let isMouseOnMenu = false;
     let isMouseAtTop = false;
@@ -122,7 +122,7 @@ export const Menu = (): ReactNode => {
     };
 }, []);
 
-const isMobile = width <= 426;
+const isMobile = width <= 441;
 
   return (
     <>
