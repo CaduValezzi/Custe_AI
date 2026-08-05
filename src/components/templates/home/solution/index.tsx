@@ -12,7 +12,6 @@ import { VisualAlerts } from "@/components/molecules/visualalerts";
 
 
 export const SolutionSection = () => {
-
   return (
     <Section id="solution">
       <div className={S.feature}>
