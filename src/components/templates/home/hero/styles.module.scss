@@ -1,7 +1,7 @@
 .hero {
   
   &__section {
-    padding: 12rem 6% 8rem;
+    padding: 20rem 6% 8rem;
     display: flex;
     justify-content: center;
     
@@ -128,5 +128,12 @@
     img{
       border-radius: 2rem;
     } 
+  }
+}
+@media (max-width: 426px) {
+  .hero {
+    &__section {
+      padding-top: 14rem;
+    }
   }
 }
