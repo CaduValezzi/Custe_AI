@@ -13,4 +13,8 @@ export interface FeaturesProps{
      * Numero inicial da lista
     */
     start?: number;
+    /** 
+     *Classe CSS do item da lista
+    */
+   className?: string;
 }

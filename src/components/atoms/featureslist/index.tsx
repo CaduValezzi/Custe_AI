@@ -3,9 +3,9 @@ import { FeaturesProps } from "./props"
 import { forwardRef } from "react";
 import { itemAnimation } from "./animation";
 
-export const Features = ({ children, start = 1 }: FeaturesProps ) => {
+export const Features = ({ children, start = 1, className }: FeaturesProps ) => {
   return (
-    <ol className={S.feature__list} start={start}>
+    <ol className={`${S.feature__list} ${className}`} start={start}>
       {children}
     </ol>
   );
