@@ -4,6 +4,8 @@ import { useState, type ReactNode } from "react";
 import S from "./styles.module.scss";
 import { useEffect } from "react";
 import { Logo } from "@/components/atoms/logo";
+import iconSrc from "@/public/list.svg";
+import { Picture } from "@/components/atoms/picture";
 
 
 export const Menu = (): ReactNode => {
@@ -100,6 +102,7 @@ const isMobile = width <= 426;
   return (
     <>
         <div className={`${S.menu__section} `}>
+           <Picture className={S.menu__icon} src={iconSrc.src} alt="Menu" />
            <div className={`${S.menu__container}`}>
                <a href="#" onClick={scrollTo("hero")}>{isMobile ? <Logo className={S.menu__logo} alt="Logo" size="medium" /> : <Logo className={S.menu__logo} alt="Logo" size="small" />}</a>
                <nav className={S.menu__nav}>
@@ -121,8 +124,9 @@ const isMobile = width <= 426;
                     </li>
                  </ul>
                </nav>
+               <Link href="/login" className={S.menu__button}>Login</Link>
            </div>
-           <Link href="/login" className={S.menu__button}>Login</Link>
+           
         </div >
     </>
   );

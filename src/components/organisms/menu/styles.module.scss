@@ -4,7 +4,7 @@
         height: 8rem;
         position: fixed;
         display: flex;
-        align-items: center;
+        justify-content: center;
         z-index: 100;
         background-color: #00101ee0;
         backdrop-filter: blur(1rem);
@@ -19,13 +19,12 @@
         
     }
     &__container{
-        max-width: 130rem;
+        width: 130rem;
         height: 100%;
         display: flex;
         align-items: center;
-        padding: 0rem 5rem;
-        margin-left: 5rem;
-        
+        justify-content: space-between;
+        padding: 0rem 5rem;        
     }
     &__logo{
         filter:  brightness(1.5);
@@ -70,6 +69,9 @@
         justify-content: center;
         
     }
+    &__icon{
+        display: none;
+    }
 }
 
 @media (max-width: 426px) {
@@ -79,8 +81,8 @@
             width: 100vw;
             padding: 0;
             display: flex;
-            justify-content: center;
             flex-direction: column;
+            // transform: translateX(-100%);
         }
         &__container{
             height: 50%;
@@ -107,6 +109,21 @@
             font-weight: 500;
             margin-left: 0;
             height: 4rem;
+        }
+        &__icon{     
+            display: flex; 
+            align-self: flex-end;
+            z-index: 100;
+            top: 2rem;
+            right: 2rem;
+            height: 4rem;
+            cursor: pointer;
+            // transform: translateX(100%);
+            margin: 2rem;
+            &:hover{
+                color: var(--blue);
+            }
+            
         }
     }
 }
