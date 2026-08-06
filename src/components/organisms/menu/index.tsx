@@ -143,8 +143,8 @@ const isMobile = width <= 441;
                         </a>
                     </li>
                     <li className={S.menu__item}>
-                        <a href="#" onClick={scrollTo("problem")}>
-                            .<div className={S.menu__item__underline}/>
+                        <a href="#" onClick={scrollTo("plans")}>
+                            Planos<div className={S.menu__item__underline}/>
                         </a>
                     </li>
                  </ul>
