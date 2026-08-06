@@ -13,10 +13,9 @@ import { VisualAlerts } from "@/components/molecules/visualalerts";
 
 export const SolutionSection = () => {
   return (
-    <Section id="solution">
-      <div className={S.feature}>
-        <div className={S.feature__container}>
-          <div className={S.feature__header}>
+    <Section className={S.solution__section} id="solution">  
+        <div className={S.solution__container}>
+          <div className={S.solution__header}>
             <Eyebrow >A Solução</Eyebrow>
             <Title>
               Um dashboard para governar todos os seus custos
@@ -25,7 +24,7 @@ export const SolutionSection = () => {
                 O Custe.AI traz clareza financeira real para quem usa APIs de terceiros.
             </Sub>
           </div>
-          <div className={S.feature__grid}>
+          <div className={S.solution__grid}>
 
             <Features>
               <Features.Item title="Cadastro centralizado">
@@ -56,7 +55,6 @@ export const SolutionSection = () => {
             </Features>
           </div>
         </div>
-      </div>
     </Section>
   );
 };
