@@ -8,8 +8,7 @@ import S from "./styles.module.scss";
 
 export const ProblemSection = () => {
   return (
-    <Section id="problem">
-      <div className={S.problem}>
+    <Section className={S.problem__section} id="problem">
         <div className={S.problem__container}>
           <div className={S.problem__header}>
             <Eyebrow >O problema</Eyebrow>
@@ -28,7 +27,6 @@ export const ProblemSection = () => {
             ))}
           </div>
         </div>
-      </div>
     </Section>
   );
 };
