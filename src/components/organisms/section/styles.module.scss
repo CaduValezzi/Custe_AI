@@ -6,3 +6,10 @@
     margin: 0 auto;
   }
 }
+@media (max-width: 441px) {
+  .section {
+    &__container {
+      padding: 8rem 4rem;
+    }
+  }
+}
