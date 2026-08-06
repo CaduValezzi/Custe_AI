@@ -9,5 +9,8 @@ export interface SectionProps {
     ID da section, utilizado para navegação interna (ex: href="#id")
     */
     id?: string;
+    /*
+    Classe CSS adicional para customização de estilos
+    */
     className?: string;
 }
