@@ -5,8 +5,7 @@ import { Demodash } from "@/components/molecules/demodash";
 export const HeroSection = () => {
   return (
     <>
-      <Section className={S.hero__section} id="hero">
-        <div className={S.hero__container}>
+      <Section className={S.hero__container} id="hero">
           <div className={S.hero__badge}>
               <span className={S.hero__badge__dot}></span>
               FIAP 2026
@@ -30,7 +29,6 @@ export const HeroSection = () => {
             </div>
           </div>
           <Demodash />
-        </div>
       </Section>
     </>
   )

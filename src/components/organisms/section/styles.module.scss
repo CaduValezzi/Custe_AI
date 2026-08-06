@@ -1,7 +1,8 @@
 .section {
-  position: relative;
-  z-index: 1;
-  padding: 10rem 6%;
-  max-width: 120rem;
-  margin: 0 auto;
+  background-color: none;
+  &__container {
+    padding: 15rem 7.5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+  }
 }

@@ -2,7 +2,6 @@
   &__header {
     margin-bottom: 6rem;
   }
-
   &__grid {
     display: grid;
 
@@ -13,7 +12,7 @@
 }
 
 @media (max-width: 441px) {
-  .feature {
+  .solution {
     &__grid {
       grid-template-columns: 1fr;
     }

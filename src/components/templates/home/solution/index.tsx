@@ -4,17 +4,16 @@ import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub"
-import S from "./styles.module.scss";
 import { Features } from "@/components/atoms/featureslist";
 import { VisualGraph } from "@/components/molecules/visualgraph";
 import { VisualAlerts } from "@/components/molecules/visualalerts";
+import S from "./styles.module.scss";
 
 
 
 export const SolutionSection = () => {
   return (
-    <Section className={S.solution__section} id="solution">  
-        <div className={S.solution__container}>
+    <Section className={S.solution__container} id="solution">  
           <div className={S.solution__header}>
             <Eyebrow >A Solução</Eyebrow>
             <Title>
@@ -54,7 +53,6 @@ export const SolutionSection = () => {
               </Features.Item>
             </Features>
           </div>
-        </div>
     </Section>
   );
 };
