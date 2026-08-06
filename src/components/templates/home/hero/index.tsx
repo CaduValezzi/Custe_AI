@@ -1,10 +1,11 @@
+import { Section } from "@/components/organisms/section";
 import S from "./styles.module.scss"
 import { Demodash } from "@/components/molecules/demodash";
 
 export const HeroSection = () => {
   return (
     <>
-      <section className={S.hero__section} id="hero">
+      <Section className={S.hero__section} id="hero">
         <div className={S.hero__container}>
           <div className={S.hero__badge}>
               <span className={S.hero__badge__dot}></span>
@@ -32,7 +33,7 @@ export const HeroSection = () => {
           <Demodash />
         </div>
 
-      </section>
+      </Section>
     </>
   )
 }; 
