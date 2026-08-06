@@ -28,11 +28,9 @@ export const HeroSection = () => {
                 <button className={S.hero__actions__ghost} >Ver dashboard</button>
               </div>
             </div>
-
           </div>
           <Demodash />
         </div>
-
       </Section>
     </>
   )
