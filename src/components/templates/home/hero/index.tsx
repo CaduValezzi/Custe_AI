@@ -2,6 +2,11 @@ import { Section } from "@/components/organisms/section";
 import S from "./styles.module.scss"
 import { Demodash } from "@/components/molecules/demodash";
 
+const scrollTo = (id: string) => (e: React.MouseEvent) => {
+  e.preventDefault();
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+};
+
 export const HeroSection = () => {
   return (
     <>
@@ -11,8 +16,6 @@ export const HeroSection = () => {
               FIAP 2026
             </div>
           <div className={S.hero__content}>
-            
-
             <div className={S.hero__info}>
               <h1 className={S.hero__headline}>
                 Pare de perder dinheiro<br/>com <span className={S.hero__headline__span}>APIs que você<br/>nem lembra que usa</span>
@@ -23,12 +26,14 @@ export const HeroSection = () => {
               </p>
 
               <div className={S.hero__actions}>
-                <button className={S.hero__actions__especial}>Ver como funciona →</button>
-                <button className={S.hero__actions__ghost} >Ver dashboard</button>
+                <button  className={S.hero__actions__especial}>Ver como funciona →</button>
+                <button onClick={scrollTo("demodash")} className={S.hero__actions__ghost}>Ver dashboard</button>
               </div>
             </div>
           </div>
-          <Demodash />
+          <div className={S.demodash__container} id="demodash">
+            <Demodash />
+          </div>
       </Section>
     </>
   )
