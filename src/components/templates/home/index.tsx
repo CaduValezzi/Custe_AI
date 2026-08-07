@@ -6,6 +6,7 @@ import { ProblemSection } from "@/components/templates/home/problem";
 import { Menu } from "@/components/organisms/menu";
 import { SolutionSection } from "./solution";
 import { PlansSection } from "./plans";
+import { Footer } from "@/components/organisms/footer";
 
 export const HomeTemplate = () => {
   return (
@@ -19,6 +20,8 @@ export const HomeTemplate = () => {
       <SolutionSection />
 
       <PlansSection />
+
+      <Footer />
 
     </>
   );
