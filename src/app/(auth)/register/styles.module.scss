@@ -1,0 +1,86 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    color: var(--color-text);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.8rem;
+  }
+
+  &__subtitle {
+    font-size: 1.4rem;
+    color: var(--muted);
+  }
+
+  &__link {
+    color: var(--cyan);
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.8; }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__hint {
+    font-size: 1.2rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: -0.4rem;
+  }
+
+  // tela de sucesso
+  &__success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.6rem;
+    padding: 2rem 0;
+  }
+
+  &__successicon {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background: rgba(0, 180, 160, 0.12);
+    border: 0.1rem solid rgba(0, 180, 160, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    color: var(--cyan);
+  }
+
+  &__successtitle {
+    font-family: var(--font-title);
+    font-size: var(--txtsize-xlarge);
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  &__successmsg {
+    font-size: 1.4rem;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 30rem;
+
+    strong { color: var(--color-text); }
+  }
+}
