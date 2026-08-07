@@ -2,19 +2,32 @@
   &__header {
     margin-bottom: 6rem;
   }
+
   &__grid {
     display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
+    grid-template-columns: repeat(1, 1fr);
     gap: 6rem;
-  }
-}
 
-@media (max-width: 441px) {
-  .solution {
-    &__grid {
-      grid-template-columns: 1fr;
+    &__line {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6rem;
+
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+
+      &__item1 {
+        @include mobile {
+          order: 1;
+        }
+      }
+
+      &__item2 {
+        @include mobile {
+          order: 2;
+        }
+      }
     }
   }
 }
