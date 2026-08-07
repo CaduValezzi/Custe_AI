@@ -1,0 +1,118 @@
+.apitable {
+  background: var(--surface);
+  border: 0.1rem solid var(--border2);
+  border-radius: 1.6rem;
+  overflow: hidden;
+  width: 100%;
+
+  &__header {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 2fr;
+    background: var(--surface2);
+    border-bottom: 0.1rem solid var(--border2);
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1.2fr 1.2fr 2fr;
+    border-bottom: 0.1rem solid var(--border);
+    transition: background 0.15s;
+
+    &:last-child { border-bottom: none; }
+    &:hover { background: var(--surface2); }
+
+    @include tablet {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+      padding: 1.2rem 0;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__cell {
+    padding: 1.4rem 2rem;
+    font-size: 1.3rem;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    font-family: var(--font-text);
+
+    // header cells
+    .apitable__header & {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+      cursor: pointer;
+      &:hover { color: var(--color-text); }
+    }
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+  }
+
+  &__dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  &__mono {
+    font-family: var(--font-mocked);
+  }
+
+  &__limitwrap {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  &__bar {
+    flex: 1;
+    height: 0.4rem;
+    background: var(--surface2);
+    border-radius: 10rem;
+    overflow: hidden;
+    min-width: 4rem;
+  }
+
+  &__fill {
+    height: 100%;
+    background: var(--grad);
+    border-radius: 10rem;
+    transition: width 0.5s ease;
+
+    &--warn {
+      background: linear-gradient(90deg, #FF7A59, #ff4500);
+    }
+  }
+
+  &__pct {
+    font-family: var(--font-mocked);
+    font-size: 1.1rem;
+    color: var(--cyan);
+    min-width: 3.5rem;
+    text-align: right;
+
+    &--warn { color: #FF7A59; }
+  }
+}
