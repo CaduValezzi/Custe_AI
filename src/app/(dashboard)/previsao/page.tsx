@@ -40,7 +40,7 @@ const tooltipStyle = {
     borderRadius: "0.8rem",
     fontSize: "1.2rem",
   },
-  formatter: (value: number) => [`R$ ${value.toLocaleString("pt-BR")}`],
+  formatter: (value: unknown) => [`R$ ${Number(value).toLocaleString("pt-BR")}`],
 };
 
 export default function PrevisaoPage() {
