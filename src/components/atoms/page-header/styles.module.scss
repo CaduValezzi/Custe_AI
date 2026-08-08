@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+
+  &__eyebrow {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--color-text);
+  }
+
+  &__subtitle {
+    max-width: 56rem;
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: var(--muted);
+  }
+}

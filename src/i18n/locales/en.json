@@ -1,0 +1,445 @@
+{
+  "app": { "name": "API Cost Shield", "tagline": "Track API spend by workspace." },
+  "nav": {
+    "dashboard": "Dashboard",
+    "providers": "Providers",
+    "settings": "Settings",
+    "logout": "Leave workspace",
+    "users": "Users",
+    "changelog": "Changelog",
+    "costAllocation": "Cost Allocation",
+    "guide": "User Guide",
+    "openMenu": "Open menu"
+  },
+  "landing": {
+    "menu": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "plans": "Plans",
+      "login": "Login"
+    },
+    "hero": {
+      "badge": "FIAP 2026",
+      "headline": "Stop losing money<br/>on <span>APIs you don't<br/>even remember using</span>",
+      "description": "Custe.AI centralizes all your spend on third-party APIs in a single dashboard — with automatic alerts, history, and cost projections.",
+      "ctaPrimary": "See how it works →",
+      "ctaSecondary": "View dashboard"
+    },
+    "problem": {
+      "eyebrow": "The problem",
+      "title": "Your API spend is everywhere",
+      "subtitle": "Small and mid-size businesses spend hours every month trying to understand what they consumed — and often find out too late.",
+      "card1": {
+        "title": "Centralized dashboard",
+        "content": "Track spend across providers in real time with clear charts, smart KPIs, and a consolidated view of your operation."
+      },
+      "card2": {
+        "title": "Smart alerts",
+        "content": "Set spend limits and get notified automatically when consumption reaches critical levels. No more discovering a budget overrun at invoice time."
+      },
+      "card3": {
+        "title": "History & trends",
+        "content": "Analyze how costs evolve by day, week, or month and spot unexpected increases, waste, and seasonality."
+      },
+      "card4": {
+        "title": "Provider comparison",
+        "content": "Quickly find out which provider delivers the best value for your company and make decisions based on real data."
+      },
+      "card5": {
+        "title": "API management",
+        "content": "Centralize keys, providers, limits, and settings in a single secure, organized environment."
+      }
+    },
+    "solution": {
+      "eyebrow": "The solution",
+      "title": "One dashboard to govern all your costs",
+      "subtitle": "Custe.AI brings real financial clarity to anyone using third-party APIs.",
+      "feature1": {
+        "title": "Centralized registration",
+        "desc": "Add all your APIs in one place — name, provider, access key, currency, and monthly limit. Everything encrypted."
+      },
+      "feature2": {
+        "title": "CSV upload",
+        "desc": "Upload invoices from any provider. The system normalizes and matches the records automatically."
+      },
+      "feature3": {
+        "title": "Real-time charts",
+        "desc": "Pie and line charts, growth KPIs, and projections — all updated after each upload."
+      },
+      "feature4": {
+        "title": "Automatic alerts",
+        "desc": "Set thresholds per API (e.g. 80% of the limit). When reached, you get an in-app and email notification — before you blow the budget."
+      },
+      "feature5": {
+        "title": "Role-based access",
+        "desc": "Admin, Analyst, and Developer — each role sees only what it needs, with granular permissions."
+      },
+      "feature6": {
+        "title": "Provider comparison",
+        "desc": "Compare similar API costs side by side, like AWS vs Azure, and make decisions grounded in real data."
+      }
+    },
+    "plans": {
+      "eyebrow": "Plans",
+      "title": "Transparent as it should be",
+      "subtitle": "No surprises. Exactly what you expect from a cost-control tool.",
+      "card": {
+        "name": "Starter",
+        "price": "Free",
+        "period": "Forever",
+        "feature1": "Up to 5 monitored APIs",
+        "feature2": "Manual CSV upload",
+        "feature3": "Basic dashboard",
+        "feature4": "1 user",
+        "cta": "Start free"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "month": "Month",
+    "monthPlaceholder": "yyyy-mm (optional)",
+    "currentTotal": "Current month (base)",
+    "previousTotal": "Previous month (base)",
+    "growth": "Growth vs previous",
+    "baseCurrency": "Base currency",
+    "breakdown": "Spend by provider",
+    "chartsTitle": "Charts",
+    "pieTitle": "Share by provider",
+    "lineTitle": "Cumulative spend in month",
+    "projection": "Projection",
+    "projectionNote": "Model note",
+    "noChartData": "No cost events for this month yet.",
+    "unknownProvider": "Unknown provider",
+    "tagFilterKey": "Filter by tag key",
+    "tagFilterValue": "Tag value",
+    "tagBreakdown": "Spend by tag",
+    "tagPieTitle": "Share by tag",
+    "groupByTag": "Group pie by tag"
+  },
+  "providers": {
+    "title": "Providers",
+    "add": "Add provider",
+    "empty": "No providers yet.",
+    "table": { "name": "Name", "kind": "Kind", "billing": "Billing", "budget": "Monthly budget", "prepaid": "Prepaid balance" },
+    "detail": "Details",
+    "newTitle": "Register provider",
+    "displayName": "Display name",
+    "providerKind": "Provider type",
+    "billingType": "Billing type",
+    "accessKey": "Access key",
+    "accessKeyHint": "Stored encrypted on the server; treat like a password.",
+    "webhookSecret": "Webhook secret (optional)",
+    "healthUrl": "Health check URL (optional)",
+    "metadataJson": "Metadata JSON (optional)",
+    "submit": "Save provider",
+    "budgetsTitle": "Budgets",
+    "monthlyLimit": "Monthly limit (base currency)",
+    "prepaidBalance": "Prepaid balance (base)",
+    "saveBudgets": "Update budgets",
+    "manualTitle": "Manual cost line",
+    "amount": "Amount (original)",
+    "currency": "Currency (ISO)",
+    "submitManual": "Record cost",
+    "healthTitle": "Health probe",
+    "runHealth": "Run probe now",
+    "healthResult": "Last result",
+    "integrationTitle": "Webhooks & integration",
+    "integrationBody": "These URLs are called by Stripe or your gateway — not from the browser. Copy the examples to your terminal or use Stripe CLI.",
+    "stripeUrl": "Stripe webhook URL",
+    "genericUrl": "Generic HMAC webhook URL",
+    "curlGeneric": "Example curl (generic)",
+    "curlStripe": "Stripe CLI",
+    "scriptLink": "Repository script for canonical JSON + HMAC",
+    "invoicesTab": "Invoices",
+    "invoicesTitle": "Invoice snapshots",
+    "invoiceAdd": "Register invoice",
+    "periodStart": "Period start",
+    "periodEnd": "Period end",
+    "notes": "Notes",
+    "objectKey": "Stored object key (optional)",
+    "uploadedAt": "Uploaded at",
+    "pollingTitle": "Polling",
+    "pollingDescription": "Automatic cost ingestion from provider APIs",
+    "pollingStatus": "Polling Status",
+    "lastPolled": "Last polled",
+    "pollingState": "Status",
+    "consecutiveFailures": "Consecutive failures",
+    "nextRetry": "Next retry",
+    "enablePolling": "Enable automatic polling",
+    "enablePollingDesc": "Automatically fetch costs from the provider API",
+    "pollingInterval": "Polling interval (seconds)",
+    "pollingIntervalPlaceholder": "3600",
+    "pollingIntervalHelp": "Minimum 300 seconds (5 minutes). Leave empty to use global default.",
+    "savePolling": "Update polling config",
+    "pollTestButton": "Test Connection",
+    "pollTesting": "Testing…",
+    "pollTestSuccess": "Connection successful! Credentials are valid.",
+    "pollTestFailed": "Connection failed. Check your API key and provider settings.",
+    "credentialsTitle": "Credentials",
+    "credentialsDescription": "Update API key and webhook secret",
+    "accessKey": "API Key / Access Key",
+    "accessKeyPlaceholder": "Enter new API key...",
+    "accessKeyHelp": "Leave empty to keep current key. The key will be encrypted before storage.",
+    "webhookSecret": "Webhook Secret",
+    "webhookSecretPlaceholder": "Enter new webhook secret...",
+    "webhookSecretHelp": "Leave empty to keep current secret. Used to verify webhook signatures.",
+    "saveCredentials": "Update credentials",
+    "tagsTitle": "Tags",
+    "tagsDescription": "Default cost-allocation tags inherited by all cost events",
+    "currentTags": "Current default tags",
+    "noTags": "No tags configured",
+    "editTags": "Edit tags JSON",
+    "saveTags": "Update tags",
+    "backfillTags": "Backfill existing events",
+    "backfillConfirm": "Re-apply current default tags to all existing cost events for this provider",
+    "backfillSuccess": "{{count}} events updated",
+    "manualTags": "Tags JSON (optional)",
+    "defaultTagsJson": "Default tags JSON (optional)"
+  },
+  "settings": {
+    "title": "Settings",
+    "tenantSection": "Workspace",
+    "currentTenant": "Active tenant ID",
+    "locale": "Language",
+    "opsSection": "Operations (advanced)",
+    "opsDesc": "Optional header X-Ops-Secret for maintenance routes. Stored only in session storage.",
+    "opsSecret": "Ops secret",
+    "saveOps": "Save ops secret (session)",
+    "clearOps": "Clear",
+    "rollup": "Rollup month",
+    "alertsScan": "Alerts scan",
+    "globalRollup": "Global rollups (all tenants)",
+    "opsResult": "Result",
+    "opsMonth": "Month key (rollup)"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "passwordHint": "At least 8 characters, including a letter, number and special character.",
+    "displayName": "Display name",
+    "tenantName": "Workspace name",
+    "timezone": "Timezone (IANA)",
+    "baseCurrency": "Base currency (ISO 4217)",
+    "loginTitle": "Sign in",
+    "loginEyebrow": "Welcome back",
+    "loginDescription": "Enter your credentials to continue.",
+    "loginSubmit": "Sign in",
+    "loginSuccess": "Signed in successfully.",
+    "forgotPassword": "Forgot password?",
+    "forgotTitle": "Reset your password",
+    "forgotDescription": "Password reset isn't wired to the backend yet. Contact your workspace administrator for help, or try signing in again.",
+    "backToLogin": "Back to sign in",
+    "orContinueWith": "or continue with",
+    "continueWithGoogle": "Continue with Google",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up",
+    "registerTitle": "Create account",
+    "registerDescription": "Register a new workspace.",
+    "registerSubmit": "Create account",
+    "registerSuccess": "Account created. Welcome!",
+    "hasAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "acceptInviteTitle": "Accept invitation",
+    "acceptInviteDescription": "Set your display name and password to activate your account.",
+    "acceptInviteSubmit": "Activate account",
+    "inviteAccepted": "Invitation accepted. Welcome!",
+    "invalidInvite": "Invalid invitation link.",
+    "inviteCreated": "Invitation sent.",
+    "inviteRevoked": "Invitation revoked."
+  },
+  "users": {
+    "title": "Users",
+    "description": "Manage team members and pending invitations.",
+    "inviteTitle": "Invite user",
+    "inviteDescription": "Send an invitation link to a new team member.",
+    "emailPlaceholder": "colleague@example.com",
+    "role": "Role",
+    "roleEditor": "Editor",
+    "roleViewer": "Viewer",
+    "sendInvite": "Send invite",
+    "pendingInvites": "Pending invitations",
+    "pendingDescription": "Invitations that have not yet been accepted.",
+    "noInvites": "No pending invitations.",
+    "expires": "Expires",
+    "copyUrl": "Copy invite link",
+    "revoke": "Revoke",
+    "inviteLinkTitle": "Invitation link created",
+    "inviteLinkDescription": "Share this link with the invited user. It expires after 48 hours and can only be used once."
+  },
+  "workspace": {
+    "active": "Workspace",
+    "switchSuccess": "Switched workspace successfully.",
+    "joinTitle": "Join workspace",
+    "joinDescription": "Enter your email to join this workspace.",
+    "joinSubmit": "Join workspace",
+    "joinSuccess": "Joined workspace successfully.",
+    "createTitle": "Create workspace",
+    "createSuccess": "Workspace created successfully.",
+    "workspaceName": "Workspace name",
+    "inviteCode": "Invite code",
+    "emailMustMatch": "Email must match the address the invite was sent to.",
+    "invalidToken": "Invalid invitation link.",
+    "alreadyMember": "You are already a member of this workspace.",
+    "notFound": "Workspace not found."
+  },
+  "changelog": {
+    "title": "Changelog",
+    "subtitle": "All notable changes to API Cost Shield, most recent first.",
+    "tagFeature": "feature",
+    "tagFix": "fix",
+    "tagSecurity": "security",
+    "tagChanged": "changed",
+    "tagRemoved": "removed"
+  },
+  "allocation": {
+    "title": "Cost Allocation",
+    "subtitle": "Cross-tabulated spend by tag dimension across providers",
+    "tagKeys": "Tag keys (comma-separated)",
+    "tagKeysPlaceholder": "team,env",
+    "generate": "Generate report",
+    "grandTotal": "Grand total",
+    "tagKeysAnalyzed": "Tag keys analyzed",
+    "rowCount": "Rows",
+    "empty": "Select tag keys and generate a report.",
+    "total": "Total"
+  },
+  "common": { "loading": "Loading…", "save": "Save", "saving": "Saving…", "cancel": "Cancel", "back": "Back", "copy": "Copy", "copied": "Copied", "actions": "Actions", "apiUp": "API up", "apiDown": "API unreachable" },
+  "guide": {
+    "eyebrow": "Documentation",
+    "title": "User Guide",
+    "subtitle": "Everything you need to know to get the most out of API Cost Shield — step by step.",
+    "showSteps": "Show steps",
+    "tipLabel": "Quick tip:",
+    "tipText": "Start by creating a provider, then enable automatic polling or send your first webhook. Within minutes you'll see real cost data on your Dashboard.",
+    "footerNote": "Need more help? Check the Changelog for the latest features or reach out to your workspace admin.",
+    "category": {
+      "gettingStarted": "Getting Started",
+      "costTracking": "Cost Tracking",
+      "costAnalysis": "Cost Analysis",
+      "teamManagement": "Team Management",
+      "security": "Security"
+    },
+    "gettingStarted": {
+      "title": "Getting Started",
+      "subtitle": "Register your account, create a workspace, and sign in for the first time.",
+      "step1": { "title": "Create an account", "desc": "Visit the Register page, enter your email, a strong password (min. 8 chars, with a number and special character), a display name, workspace name, timezone, and base currency. The first user of a workspace automatically becomes admin." },
+      "step2": { "title": "Sign in", "desc": "Use your email and password on the Sign In page. Your session is stored in a secure httpOnly cookie — no tokens are exposed to JavaScript." },
+      "step3": { "title": "Explore the sidebar", "desc": "The left sidebar gives you access to Dashboard, Providers, Cost Allocation, Settings, Users (admins only), Changelog, and this User Guide." },
+      "step4": { "title": "Add your first provider", "desc": "Go to Providers → Add provider. Fill in the name, provider type, and billing type. Your API key is encrypted before being stored on the server." }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "subtitle": "Monitor your total API spend, growth trends, and per-provider breakdowns in real time.",
+      "step1": { "title": "Read the summary cards", "desc": "The four cards at the top show: current month total, previous month total, growth percentage vs last month, and your workspace's base currency." },
+      "step2": { "title": "Filter by month", "desc": "Type a month in yyyy-mm format (e.g. 2025-06) in the Month field to inspect historical data. Leave blank for the current month." },
+      "step3": { "title": "Filter by tag", "desc": "Enter a Tag Key (e.g. 'team') and Tag Value (e.g. 'ml-ops') to scope all cards and charts to a specific dimension." },
+      "step4": { "title": "Group pie chart by tag", "desc": "Type a tag key in 'Group pie by tag' to switch the pie chart from provider-based to tag-value-based slices — perfect for comparing team spend." },
+      "step5": { "title": "Read the projection card", "desc": "When available, the Projection card shows a linear end-of-month spend estimate based on your current daily run rate. Use it for early budget warnings." }
+    },
+    "providers": {
+      "title": "Providers",
+      "subtitle": "Register and manage the AI / API services whose costs you want to track.",
+      "step1": { "title": "Add a provider", "desc": "Click 'Add provider', enter a display name, choose the provider kind (e.g. openai, aws, stripe, generic), set billing type (postpaid or prepaid), and optionally add a health-check URL." },
+      "step2": { "title": "Enter your API key", "desc": "Paste your provider API key in the Access Key field. It is encrypted with Fernet before being stored — treat it like a password and never share it." },
+      "step3": { "title": "Set a monthly budget", "desc": "In the Budgets tab, enter a Monthly Limit in your base currency. Alerts fire automatically at 80% and 100% of the budget." },
+      "step4": { "title": "Run the health probe", "desc": "Use the Health tab to ping your provider's health URL on demand and confirm it is reachable." },
+      "step5": { "title": "View invoices", "desc": "The Invoices tab lets you register invoice snapshots (period start/end, notes, object key). These act as a permanent audit trail of your billing history." },
+      "step6": { "title": "Delete or archive", "desc": "Providers can be updated at any time. Credentials, polling config, tags, and budget limits each have their own tab for focused editing." }
+    },
+    "polling": {
+      "title": "Automatic Polling",
+      "subtitle": "Let the platform fetch costs from your provider APIs automatically — no webhooks required.",
+      "step1": { "title": "Enable polling", "desc": "Go to Providers → select a provider → Polling tab. Toggle 'Enable automatic polling'. Currently supported: OpenAI (usage API). More adapters are in progress." },
+      "step2": { "title": "Set the interval", "desc": "Enter a polling interval in seconds (minimum 300 s / 5 min). Leave blank to use the global default. The platform will fetch costs on that schedule." },
+      "step3": { "title": "Test the connection", "desc": "Click 'Test Connection' to validate that your API key can reach the provider. A green success message confirms credentials are valid." },
+      "step4": { "title": "Monitor polling health", "desc": "The Polling Status section shows the last polled timestamp, consecutive failures, and next retry time. On first poll, 30 days of historical data are backfilled automatically." }
+    },
+    "webhooks": {
+      "title": "Webhooks & Integration",
+      "subtitle": "Push cost events from Stripe or any HMAC-signed gateway directly into the platform.",
+      "step1": { "title": "Find your webhook URLs", "desc": "Go to Providers → select a provider → Integration tab. You'll see a Stripe webhook URL and a Generic HMAC webhook URL. Copy the relevant one." },
+      "step2": { "title": "Configure on the provider side", "desc": "Paste the URL into your Stripe Dashboard (or gateway) as a webhook endpoint. Set the webhook secret to match the one stored in the platform." },
+      "step3": { "title": "Verify with curl", "desc": "The Integration tab provides a ready-made curl example for the generic HMAC endpoint and Stripe CLI command. Use them to send a test event and confirm ingestion." }
+    },
+    "manualCosts": {
+      "title": "Manual Cost Entry",
+      "subtitle": "Record one-off or corrective cost lines directly from the UI without a webhook.",
+      "step1": { "title": "Open the manual form", "desc": "Go to Providers → select a provider → scroll to the 'Manual cost line' section below the provider details." },
+      "step2": { "title": "Fill in the cost", "desc": "Enter the amount in the original currency, the ISO currency code (e.g. USD), and optionally a tags JSON object (e.g. {\"team\": \"ml-ops\"})." },
+      "step3": { "title": "Record the cost", "desc": "Click 'Record cost'. The event is immediately ingested and will appear in your Dashboard on the next data refresh." }
+    },
+    "costAllocation": {
+      "title": "Cost Allocation",
+      "subtitle": "Cross-tabulate spend by tag dimensions across all providers to understand who is spending what.",
+      "step1": { "title": "Navigate to Cost Allocation", "desc": "Click 'Cost Allocation' in the sidebar. This page lets you slice spend across multiple tag keys at once." },
+      "step2": { "title": "Enter tag keys", "desc": "Type one or more tag keys separated by commas (e.g. 'team,env'). These must match the tag keys you've configured on your providers or cost events." },
+      "step3": { "title": "Generate the report", "desc": "Click 'Generate report' (or press Enter). The table shows each tag-key/tag-value pair as a row, with a spend column per provider and a row total." },
+      "step4": { "title": "Read the summary cards", "desc": "Three summary cards above the table show: Grand Total, number of tag keys analyzed, and total row count. Use the Month field to scope the report to a specific billing period." }
+    },
+    "tags": {
+      "title": "Tags & Cost Labels",
+      "subtitle": "Attribute every cost event to a team, project, or environment using a flexible tagging system.",
+      "step1": { "title": "Set default tags on a provider", "desc": "Go to Providers → select a provider → Tags tab. Enter a JSON object like {\"team\": \"ml-ops\", \"env\": \"prod\"}. All cost events from this provider will inherit these tags automatically." },
+      "step2": { "title": "Override tags per event", "desc": "When recording a manual cost or sending a webhook payload, include a 'tags' field. Event-level values override provider defaults on key conflict." },
+      "step3": { "title": "Backfill existing events", "desc": "Changed your default tags? Click 'Backfill existing events' in the Tags tab to re-apply the updated tags to all historical cost events for that provider. Event-level overrides are preserved." },
+      "step4": { "title": "Filter by tags on the Dashboard", "desc": "Use the Tag Key and Tag Value filters on the Dashboard to scope all metrics and charts to a specific dimension (e.g. team=frontend)." }
+    },
+    "budgets": {
+      "title": "Budgets & Alerts",
+      "subtitle": "Set monthly spending limits per provider and get notified before you overspend.",
+      "step1": { "title": "Set a monthly limit", "desc": "Go to Providers → select a provider → Budgets tab. Enter a Monthly Limit in your base currency. Zero or empty means no limit." },
+      "step2": { "title": "Set a prepaid balance", "desc": "For prepaid billing models, enter the Prepaid Balance. The platform tracks usage against this balance." },
+      "step3": { "title": "Alert thresholds", "desc": "Alerts fire automatically at 80% and 100% of the monthly limit. The Dashboard projection card will also highlight providers trending over budget." }
+    },
+    "analytics": {
+      "title": "Analytics & Charts",
+      "subtitle": "Visualise spending patterns with pie charts, cumulative spend timelines, and projection models.",
+      "step1": { "title": "Pie chart — share by provider", "desc": "Shows each provider's proportion of total spend for the selected month. Hover slices for exact amounts. Toggle to a tag-based pie by entering a tag key in 'Group pie by tag'." },
+      "step2": { "title": "Line chart — cumulative MTD", "desc": "Shows spend accumulated day by day through the current (or selected) month. A steeper slope means faster spend acceleration." },
+      "step3": { "title": "Projection card", "desc": "A linear regression on daily spend predicts the end-of-month total. The model note describes the confidence level. Use this to intervene early if trajectory exceeds budget." }
+    },
+    "settings": {
+      "title": "Settings",
+      "subtitle": "Configure your workspace name, timezone, base currency, and advanced operations.",
+      "step1": { "title": "Update workspace details", "desc": "In the Workspace section, you can view your active Tenant ID and update workspace-level preferences." },
+      "step2": { "title": "Change language", "desc": "Select your preferred language (English or Portuguese) from the Language dropdown. The change applies immediately across the entire interface." },
+      "step3": { "title": "Operations (advanced)", "desc": "The Ops section is for administrators. Enter the X-Ops-Secret header value to trigger maintenance routes like monthly rollups and alerts scans. The secret is stored in session storage only." }
+    },
+    "users": {
+      "title": "Users & Invitations",
+      "subtitle": "Manage team members, roles, and pending invitations from the Users page (admin only).",
+      "step1": { "title": "Invite a team member", "desc": "Go to Users → Invite user. Enter the colleague's email and choose a role (Editor or Viewer). Click 'Send invite' to generate a secure 8-character invite code." },
+      "step2": { "title": "Share the invite link", "desc": "After sending, a dialog shows the full invite URL. Share it directly with your colleague. It expires in 48 hours and can only be redeemed once." },
+      "step3": { "title": "Manage pending invites", "desc": "The Pending Invitations table lists all open invites with expiry times. Copy the link again or click Revoke to cancel an invite before it is used." },
+      "step4": { "title": "Understand roles", "desc": "admin: full access including user management. editor: can create/update providers and record costs. viewer: read-only access to all data. Roles are hierarchical — higher roles inherit all lower-role permissions." }
+    },
+    "workspaces": {
+      "title": "Workspaces",
+      "subtitle": "Create multiple workspaces or join an existing one without creating a new account.",
+      "step1": { "title": "Create a new workspace", "desc": "In the sidebar bottom section, click 'Create workspace', enter a workspace name, and confirm. You become the admin of the new workspace automatically." },
+      "step2": { "title": "Join via invite code", "desc": "If you received an invite code (not a full link), paste it in the 'Join workspace' input in the sidebar and click the plus button." },
+      "step3": { "title": "Switch between workspaces", "desc": "When you belong to more than one workspace, a dropdown appears in the sidebar. Select any workspace to switch context instantly. Your JWT is re-issued with the new active workspace." }
+    },
+    "security": {
+      "title": "Security Overview",
+      "subtitle": "How the platform protects your data, credentials, and sessions.",
+      "step1": { "title": "JWT authentication", "desc": "Access tokens expire in 15 minutes; refresh tokens expire in 7 days. Both are stored in httpOnly, SameSite=strict cookies — never accessible to JavaScript." },
+      "step2": { "title": "Encrypted credentials", "desc": "All API keys and webhook secrets are encrypted with Fernet (AES-128-CBC + HMAC-SHA256) before being written to the database. They are only decrypted in memory at runtime." },
+      "step3": { "title": "HMAC webhook verification", "desc": "Incoming webhook payloads are verified using HMAC-SHA256 against the stored webhook secret. Tampered or unsigned payloads are rejected automatically." }
+    },
+    "credentials": {
+      "title": "Updating Credentials",
+      "subtitle": "Rotate API keys and webhook secrets for any provider without downtime.",
+      "step1": { "title": "Open the Credentials tab", "desc": "Go to Providers → select a provider → Credentials tab. You'll see fields for the API Key and Webhook Secret." },
+      "step2": { "title": "Enter new values", "desc": "Leave a field blank to keep the current value. Only the fields you fill in will be updated. The new key is encrypted before storage." },
+      "step3": { "title": "Save and verify", "desc": "Click 'Update credentials', then use the Test Connection button in the Polling tab to confirm the new key is valid." }
+    },
+    "changelog": {
+      "title": "Changelog",
+      "subtitle": "Stay up to date with every new feature, fix, and security improvement.",
+      "step1": { "title": "Read the timeline", "desc": "The Changelog page lists every release in reverse chronological order. Each entry shows the version number, release date, and a list of tagged items." },
+      "step2": { "title": "Understand the tags", "desc": "feature (blue) = new capability. fix (amber) = bug correction. security (green) = security improvement. changed (purple) = modified behaviour. removed (red) = deprecated/removed functionality." }
+    }
+  }
+}

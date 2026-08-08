@@ -3,19 +3,20 @@ import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import S from "./styles.module.scss";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Logo } from "@/components/atoms/logo";
 import iconSrc from "@/public/list.svg";
 import { Picture } from "@/components/atoms/picture";
 
 
 export const Menu = (): ReactNode => {
-    const [width, setWidth] = useState<number>(0);
+    const { t } = useTranslation();
+    const [width, setWidth] = useState<number>(() => (typeof window !== "undefined" ? window.innerWidth : 0));
         const scrollTo = (id: string) => (e: React.MouseEvent) => {
         e.preventDefault();
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     };
     useEffect(() => {
-    setWidth(window.innerWidth);
     const menuSection = document.querySelector(`.${S.menu__section}`);
     const menuIcon = document.querySelector(`.${S.menu__icon}`);
     const menuContainer = document.querySelector(`.${S.menu__container}`);
@@ -38,10 +39,6 @@ export const Menu = (): ReactNode => {
         menuSection?.classList.toggle(S.menu__section__hiddenMobile);
         menuIcon?.classList.toggle(S.menu__icon__show);
     }
-    const showMenuMobile = () => {
-        menuSection?.classList.remove(S.menu__section__hiddenMobile);
-        menuIcon?.classList.remove(S.menu__icon__show);
-    };
     const hideMenuMobile = () => {
         menuSection?.classList.add(S.menu__section__hiddenMobile);
         menuIcon?.classList.add(S.menu__icon__show);
@@ -134,22 +131,22 @@ const isMobile = width <= 441;
                  <ul className={S.menu__list}>
                    <li className={S.menu__item}>
                         <a href="#" onClick={scrollTo("problem")}>
-                            Problema<div className={S.menu__item__underline}/>
+                            {t("landing.menu.problem")}<div className={S.menu__item__underline}/>
                         </a>
                     </li>
                     <li className={S.menu__item}>
                         <a href="#" onClick={scrollTo("solution")}>
-                            Solução<div className={S.menu__item__underline}/>
+                            {t("landing.menu.solution")}<div className={S.menu__item__underline}/>
                         </a>
                     </li>
                     <li className={S.menu__item}>
                         <a href="#" onClick={scrollTo("plans")}>
-                            Planos<div className={S.menu__item__underline}/>
+                            {t("landing.menu.plans")}<div className={S.menu__item__underline}/>
                         </a>
                     </li>
                  </ul>
                </nav>
-               <Link href="/login" className={S.menu__button}>Login</Link>
+               <Link href="/login" className={S.menu__button}>{t("landing.menu.login")}</Link>
            </div>
         </div >
     </>

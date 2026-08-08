@@ -1,8 +1,8 @@
 import S from "./style.module.scss"
 
-export const VisualAlerts = ({ className }: { className?: string }) => {
+export const VisualAlerts = () => {
     return(
-        <div className={`${S["feature-visual"]} ${className || ""}`}>
+        <div className={S["feature-visual"]}>
             <div className={S["chart-title"]}>Alertas configurados</div>
             <div className={S["alert-item"]}>
                 <div className={S["alert-indicator-active"]}></div>

@@ -1,190 +1,152 @@
 "use client";
 
-import { useState } from "react";
-import { AuthLayout } from "@/components/templates/authlayout";
-import { Input } from "@/components/atoms/input";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useMemo } from "react";
+import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
+import { z } from "zod";
+
+import { getErrorDetail } from "@/api/client";
 import { Button } from "@/components/atoms/button";
 import { Eyebrow } from "@/components/atoms/eyebrow";
+import { Input } from "@/components/atoms/input";
+import { AuthLayout } from "@/components/templates/authlayout";
+import { useAuth } from "@/providers";
+
 import S from "./styles.module.scss";
 
-interface FormState {
-  nome: string;
-  email: string;
-  senha: string;
-  confirmarSenha: string;
+type TranslateFn = (key: string, options?: Record<string, unknown>) => string;
+
+/** Built inside the component so the regex error message is localized. */
+function buildRegisterSchema(t: TranslateFn) {
+  const hint = t("auth.passwordHint");
+  return z.object({
+    email: z.email(),
+    password: z
+      .string()
+      .min(8)
+      .regex(/[A-Za-z]/, hint)
+      .regex(/[0-9]/, hint)
+      .regex(/[^A-Za-z0-9]/, hint),
+    display_name: z.string().min(1).max(128),
+    tenant_name: z.string().min(1).max(256),
+    timezone: z.string().min(1),
+    base_currency: z.string().length(3).toUpperCase(),
+  });
 }
 
-interface FormErrors {
-  nome?: string;
-  email?: string;
-  senha?: string;
-  confirmarSenha?: string;
-}
+type RegisterValues = {
+  email: string;
+  password: string;
+  display_name: string;
+  tenant_name: string;
+  timezone: string;
+  base_currency: string;
+};
 
 export default function RegisterPage() {
-  const [form, setForm] = useState<FormState>({
-    nome: "",
-    email: "",
-    senha: "",
-    confirmarSenha: "",
+  const { t } = useTranslation();
+  const router = useRouter();
+  const { register } = useAuth();
+
+  const schema = useMemo(() => buildRegisterSchema(t), [t]);
+
+  const form = useForm<RegisterValues>({
+    resolver: zodResolver(schema),
+    defaultValues: {
+      email: "",
+      password: "",
+      display_name: "",
+      tenant_name: "",
+      timezone: "UTC",
+      base_currency: "USD",
+    },
   });
 
-  const [errors, setErrors] = useState<FormErrors>({});
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-
-  const handleChange = (field: keyof FormState) => (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm((prev) => ({ ...prev, [field]: e.target.value }));
-    if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }));
+  async function onSubmit(values: RegisterValues) {
+    try {
+      await register(values);
+      toast.success(t("auth.registerSuccess"));
+      router.push("/app");
+    } catch (error) {
+      toast.error(getErrorDetail(error));
     }
-  };
-
-  const validate = (): FormErrors => {
-    const newErrors: FormErrors = {};
-
-    if (!form.nome.trim()) {
-      newErrors.nome = "Nome obrigatório";
-    } else if (form.nome.trim().length < 3) {
-      newErrors.nome = "Mínimo 3 caracteres";
-    }
-
-    if (!form.email) {
-      newErrors.email = "E-mail obrigatório";
-    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
-      newErrors.email = "E-mail inválido";
-    }
-
-    if (!form.senha) {
-      newErrors.senha = "Senha obrigatória";
-    } else if (form.senha.length < 8) {
-      newErrors.senha = "Mínimo 8 caracteres";
-    } else if (!/[A-Z]/.test(form.senha)) {
-      newErrors.senha = "Deve conter ao menos uma letra maiúscula";
-    } else if (!/[0-9]/.test(form.senha)) {
-      newErrors.senha = "Deve conter ao menos um número";
-    }
-
-    if (!form.confirmarSenha) {
-      newErrors.confirmarSenha = "Confirmação obrigatória";
-    } else if (form.senha !== form.confirmarSenha) {
-      newErrors.confirmarSenha = "As senhas não coincidem";
-    }
-
-    return newErrors;
-  };
-
-  const handleSubmit = async () => {
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return;
-    }
-
-    setErrors({});
-    setLoading(true);
-
-    // TODO: integrar com a API — POST /users
-    // const response = await fetch("/api/users", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify({ nome: form.nome, email: form.email, senha: form.senha }),
-    // });
-
-    await new Promise((r) => setTimeout(r, 1500));
-
-    console.log("Dados para salvar no banco:", {
-      nome: form.nome,
-      email: form.email,
-      senha: form.senha,
-    });
-
-    setLoading(false);
-    setSuccess(true);
-  };
-
-  if (success) {
-    return (
-      <AuthLayout>
-        <div className={S.register__success}>
-          <div className={S.register__successicon}>✓</div>
-          <h2 className={S.register__successtitle}>Conta criada!</h2>
-          <p className={S.register__successmsg}>
-            Bem-vindo ao Custe.AI, <strong>{form.nome}</strong>. Faça login para acessar seu dashboard.
-          </p>
-          <Button onClick={() => (window.location.href = "/login")}>
-            Ir para o login
-          </Button>
-        </div>
-      </AuthLayout>
-    );
   }
 
   return (
     <AuthLayout>
       <div className={S.register}>
         <div className={S.register__header}>
-          <Eyebrow>Criar conta</Eyebrow>
-          <h1 className={S.register__title}>Comece de graça</h1>
+          <Eyebrow>{t("auth.registerDescription")}</Eyebrow>
+          <h1 className={S.register__title}>{t("auth.registerTitle")}</h1>
           <p className={S.register__subtitle}>
-            Já tem uma conta?{" "}
-            <a href="/login" className={S.register__link}>
-              Fazer login
-            </a>
+            {t("auth.hasAccount")}{" "}
+            <Link href="/login" className={S.register__link}>
+              {t("auth.signIn")}
+            </Link>
           </p>
         </div>
 
-        <div className={S.register__form}>
-          <Input
-            id="nome"
-            label="Nome completo"
-            type="text"
-            placeholder="Seu nome"
-            value={form.nome}
-            onChange={handleChange("nome")}
-            error={errors.nome}
-            autoComplete="name"
-          />
+        <form className={S.register__form} onSubmit={form.handleSubmit(onSubmit)} noValidate>
           <Input
             id="email"
-            label="E-mail"
+            label={t("auth.email")}
             type="email"
-            placeholder="seu@email.com"
-            value={form.email}
-            onChange={handleChange("email")}
-            error={errors.email}
             autoComplete="email"
+            placeholder="seu@email.com"
+            error={form.formState.errors.email?.message}
+            {...form.register("email")}
           />
           <Input
-            id="senha"
-            label="Senha"
+            id="password"
+            label={t("auth.password")}
             type="password"
-            placeholder="Mínimo 8 caracteres"
-            value={form.senha}
-            onChange={handleChange("senha")}
-            error={errors.senha}
             autoComplete="new-password"
+            placeholder="••••••••"
+            error={form.formState.errors.password?.message}
+            {...form.register("password")}
+          />
+          <p className={S.register__hint}>{t("auth.passwordHint")}</p>
+          <Input
+            id="display_name"
+            label={t("auth.displayName")}
+            autoComplete="name"
+            error={form.formState.errors.display_name?.message}
+            {...form.register("display_name")}
           />
           <Input
-            id="confirmarSenha"
-            label="Confirmar senha"
-            type="password"
-            placeholder="Repita a senha"
-            value={form.confirmarSenha}
-            onChange={handleChange("confirmarSenha")}
-            error={errors.confirmarSenha}
-            autoComplete="new-password"
+            id="tenant_name"
+            label={t("auth.tenantName")}
+            error={form.formState.errors.tenant_name?.message}
+            {...form.register("tenant_name")}
           />
-
-          <p className={S.register__hint}>
-            Ao criar uma conta você concorda com nossos{" "}
-            <a href="#" className={S.register__link}>Termos de uso</a>.
-          </p>
-
-          <Button onClick={handleSubmit} loading={loading} disabled={loading}>
-            Criar conta
+          <div className={S.register__row}>
+            <Input
+              id="timezone"
+              label={t("auth.timezone")}
+              error={form.formState.errors.timezone?.message}
+              {...form.register("timezone")}
+            />
+            <Input
+              id="base_currency"
+              label={t("auth.baseCurrency")}
+              maxLength={3}
+              error={form.formState.errors.base_currency?.message}
+              {...form.register("base_currency")}
+            />
+          </div>
+          <Button type="submit" loading={form.formState.isSubmitting}>
+            {t("auth.registerSubmit")}
           </Button>
-        </div>
+        </form>
+
+        <Link href="/" className={S.register__back}>
+          <span className={S.register__back__arrow}>←</span>
+          {t("common.back")}
+        </Link>
       </div>
     </AuthLayout>
   );

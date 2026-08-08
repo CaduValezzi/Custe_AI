@@ -1,0 +1,445 @@
+{
+  "app": { "name": "API Cost Shield", "tagline": "Acompanhe gastos de API por workspace." },
+  "nav": {
+    "dashboard": "Painel",
+    "providers": "Provedores",
+    "settings": "Configurações",
+    "logout": "Sair do workspace",
+    "users": "Usuários",
+    "changelog": "Histórico de mudanças",
+    "costAllocation": "Alocação de Custos",
+    "guide": "Guia do Usuário",
+    "openMenu": "Abrir menu"
+  },
+  "landing": {
+    "menu": {
+      "problem": "Problema",
+      "solution": "Solução",
+      "plans": "Planos",
+      "login": "Login"
+    },
+    "hero": {
+      "badge": "FIAP 2026",
+      "headline": "Pare de perder dinheiro<br/>com <span>APIs que você<br/>nem lembra que usa</span>",
+      "description": "O Custe.AI centraliza todos os seus gastos com APIs de terceiros em um unico dashboard — com alertas automaticos, historico e projecao de custos.",
+      "ctaPrimary": "Ver como funciona →",
+      "ctaSecondary": "Ver dashboard"
+    },
+    "problem": {
+      "eyebrow": "O problema",
+      "title": "Seus gastos com APIs estão por toda parte",
+      "subtitle": "Pequenas e medias empresas gastam horas todo mês tentando entender o que consumiram — e muitas vezes descobrem tarde demais.",
+      "card1": {
+        "title": "Dashboard Centralizado",
+        "content": "Acompanhe gastos de diferentes provedores em tempo real com gráficos claros, KPIs inteligentes e visão consolidada da sua operação."
+      },
+      "card2": {
+        "title": "Alertas Inteligentes",
+        "content": "Defina limites de gastos e seja avisado automaticamente quando o consumo atingir níveis críticos. Chega de descobrir estouro de orçamento no fechamento da fatura."
+      },
+      "card3": {
+        "title": "Histórico e Tendências",
+        "content": "Analise a evolução dos custos por dia, semana ou mês e identifique aumentos inesperados, desperdícios e sazonalidades."
+      },
+      "card4": {
+        "title": "Comparação de Provedores",
+        "content": "Descubra rapidamente qual provedor entrega o melhor custo-benefício para sua empresa e tome decisões com dados reais."
+      },
+      "card5": {
+        "title": "Gestão de APIs",
+        "content": "Centralize chaves, provedores, limites e configurações em um único ambiente seguro e organizado."
+      }
+    },
+    "solution": {
+      "eyebrow": "A Solução",
+      "title": "Um dashboard para governar todos os seus custos",
+      "subtitle": "O Custe.AI traz clareza financeira real para quem usa APIs de terceiros.",
+      "feature1": {
+        "title": "Cadastro centralizado",
+        "desc": "Adicione todas as suas APIs em um lugar — nome, provedor, chave de acesso, moeda e limite mensal. Tudo criptografado."
+      },
+      "feature2": {
+        "title": "Upload via CSV",
+        "desc": "Faça upload das faturas de qualquer provedor. O sistema normaliza e associa os registros automaticamente."
+      },
+      "feature3": {
+        "title": "Gráficos em tempo real",
+        "desc": "Pizza, linha por periodo, e KPIs de crescimento e projeção — tudo atualizado apos cada upload."
+      },
+      "feature4": {
+        "title": "Alertas automáticos",
+        "desc": "Configure thresholds por API (ex: 80% do limite). Quando atingido, recebe notificacao in-app e por e-mail — antes de estourar."
+      },
+      "feature5": {
+        "title": "Controle por perfil",
+        "desc": "Administrador, Analista e Desenvolvedor — cada um acessa so o que precisa, com permissoes granulares."
+      },
+      "feature6": {
+        "title": "Comparação de provedores",
+        "desc": "Visualize lado a lado o custo de APIs similares como AWS vs Azure e tome decisoes baseadas em dados reais."
+      }
+    },
+    "plans": {
+      "eyebrow": "Planos",
+      "title": "Transparente como deveria ser",
+      "subtitle": "Sem surpresas. Exatamente o que voce espera de uma ferramenta de controle de custos.",
+      "card": {
+        "name": "Starter",
+        "price": "Grátis",
+        "period": "Para sempre",
+        "feature1": "Ate 5 APIs monitoradas",
+        "feature2": "Upload manual de CSV",
+        "feature3": "Dashboard basico",
+        "feature4": "1 usuario",
+        "cta": "Comecar grátis"
+      }
+    }
+  },
+  "dashboard": {
+    "title": "Painel",
+    "month": "Mês",
+    "monthPlaceholder": "aaaa-mm (opcional)",
+    "currentTotal": "Mês atual (base)",
+    "previousTotal": "Mês anterior (base)",
+    "growth": "Crescimento vs anterior",
+    "baseCurrency": "Moeda base",
+    "breakdown": "Gasto por provedor",
+    "chartsTitle": "Gráficos",
+    "pieTitle": "Participação por provedor",
+    "lineTitle": "Gasto acumulado no mês",
+    "projection": "Projeção",
+    "projectionNote": "Nota do modelo",
+    "noChartData": "Ainda não há eventos de custo neste mês.",
+    "unknownProvider": "Provedor desconhecido",
+    "tagFilterKey": "Filtrar por chave de tag",
+    "tagFilterValue": "Valor da tag",
+    "tagBreakdown": "Gasto por tag",
+    "tagPieTitle": "Participação por tag",
+    "groupByTag": "Agrupar gráfico por tag"
+  },
+  "providers": {
+    "title": "Provedores",
+    "add": "Adicionar provedor",
+    "empty": "Nenhum provedor ainda.",
+    "table": { "name": "Nome", "kind": "Tipo", "billing": "Cobrança", "budget": "Orçamento mensal", "prepaid": "Saldo pré-pago" },
+    "detail": "Detalhes",
+    "newTitle": "Cadastrar provedor",
+    "displayName": "Nome de exibição",
+    "providerKind": "Tipo de provedor",
+    "billingType": "Tipo de cobrança",
+    "accessKey": "Chave de acesso",
+    "accessKeyHint": "Armazenada criptografada no servidor; trate como senha.",
+    "webhookSecret": "Segredo de webhook (opcional)",
+    "healthUrl": "URL de health check (opcional)",
+    "metadataJson": "Metadata JSON (opcional)",
+    "submit": "Salvar provedor",
+    "budgetsTitle": "Orçamentos",
+    "monthlyLimit": "Limite mensal (moeda base)",
+    "prepaidBalance": "Saldo pré-pago (base)",
+    "saveBudgets": "Atualizar orçamentos",
+    "manualTitle": "Lançamento manual de custo",
+    "amount": "Valor (original)",
+    "currency": "Moeda (ISO)",
+    "submitManual": "Registrar custo",
+    "healthTitle": "Sonda de saúde",
+    "runHealth": "Executar agora",
+    "healthResult": "Último resultado",
+    "integrationTitle": "Webhooks e integração",
+    "integrationBody": "Essas URLs são chamadas pela Stripe ou pelo seu gateway — não pelo navegador. Copie os exemplos para o terminal ou use Stripe CLI.",
+    "stripeUrl": "URL webhook Stripe",
+    "genericUrl": "URL webhook genérico (HMAC)",
+    "curlGeneric": "Exemplo curl (genérico)",
+    "curlStripe": "Stripe CLI",
+    "scriptLink": "Script do repositório para JSON canônico + HMAC",
+    "invoicesTab": "Faturas",
+    "invoicesTitle": "Snapshots de fatura",
+    "invoiceAdd": "Registrar fatura",
+    "periodStart": "Início do período",
+    "periodEnd": "Fim do período",
+    "notes": "Notas",
+    "objectKey": "Chave de objeto armazenado (opcional)",
+    "uploadedAt": "Enviado em",
+    "pollingTitle": "Sondagem",
+    "pollingDescription": "Ingestão automática de custos das APIs dos provedores",
+    "pollingStatus": "Status da Sondagem",
+    "lastPolled": "Última sondagem",
+    "pollingState": "Status",
+    "consecutiveFailures": "Falhas consecutivas",
+    "nextRetry": "Próxima tentativa",
+    "enablePolling": "Ativar sondagem automática",
+    "enablePollingDesc": "Buscar custos automaticamente via API do provedor",
+    "pollingInterval": "Intervalo de sondagem (segundos)",
+    "pollingIntervalPlaceholder": "3600",
+    "pollingIntervalHelp": "Mínimo 300 segundos (5 minutos). Deixe em branco para usar o padrão global.",
+    "savePolling": "Atualizar configuração de sondagem",
+    "pollTestButton": "Testar Conexão",
+    "pollTesting": "Testando…",
+    "pollTestSuccess": "Conexão bem-sucedida! Credenciais válidas.",
+    "pollTestFailed": "Falha na conexão. Verifique sua chave de API e configurações do provedor.",
+    "credentialsTitle": "Credenciais",
+    "credentialsDescription": "Atualizar chave de API e segredo de webhook",
+    "accessKey": "Chave de API / Access Key",
+    "accessKeyPlaceholder": "Digite a nova chave de API...",
+    "accessKeyHelp": "Deixe em branco para manter a chave atual. A chave será criptografada antes do armazenamento.",
+    "webhookSecret": "Segredo do Webhook",
+    "webhookSecretPlaceholder": "Digite o novo segredo do webhook...",
+    "webhookSecretHelp": "Deixe em branco para manter o segredo atual. Usado para verificar assinaturas de webhook.",
+    "saveCredentials": "Atualizar credenciais",
+    "tagsTitle": "Tags",
+    "tagsDescription": "Tags padrão de alocação de custos herdadas por todos os eventos",
+    "currentTags": "Tags padrão atuais",
+    "noTags": "Nenhuma tag configurada",
+    "editTags": "Editar tags JSON",
+    "saveTags": "Atualizar tags",
+    "backfillTags": "Preencher eventos existentes",
+    "backfillConfirm": "Reaplicar tags padrão atuais em todos os eventos de custo existentes deste provedor",
+    "backfillSuccess": "{{count}} eventos atualizados",
+    "manualTags": "Tags JSON (opcional)",
+    "defaultTagsJson": "Tags padrão JSON (opcional)"
+  },
+  "settings": {
+    "title": "Configurações",
+    "tenantSection": "Workspace",
+    "currentTenant": "Tenant ID ativo",
+    "locale": "Idioma",
+    "opsSection": "Operações (avançado)",
+    "opsDesc": "Cabeçalho opcional X-Ops-Secret para rotas de manutenção. Salvo apenas na sessão do navegador.",
+    "opsSecret": "Segredo ops",
+    "saveOps": "Salvar segredo ops (sessão)",
+    "clearOps": "Limpar",
+    "rollup": "Rollup do mês",
+    "alertsScan": "Varredura de alertas",
+    "globalRollup": "Rollups globais (todos os tenants)",
+    "opsResult": "Resultado",
+    "opsMonth": "Chave do mês (rollup)"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Senha",
+    "passwordHint": "Mínimo 8 caracteres, incluindo letra, número e caractere especial.",
+    "displayName": "Nome de exibição",
+    "tenantName": "Nome do workspace",
+    "timezone": "Fuso horário (IANA)",
+    "baseCurrency": "Moeda base (ISO 4217)",
+    "loginTitle": "Entrar",
+    "loginEyebrow": "Bem-vindo de volta",
+    "loginDescription": "Informe suas credenciais para continuar.",
+    "loginSubmit": "Entrar",
+    "loginSuccess": "Login realizado com sucesso.",
+    "forgotPassword": "Esqueceu a senha?",
+    "forgotTitle": "Recuperar senha",
+    "forgotDescription": "A recuperação de senha ainda não está disponível. Contate o administrador do seu workspace ou tente entrar novamente.",
+    "backToLogin": "Voltar para o login",
+    "orContinueWith": "ou continue com",
+    "continueWithGoogle": "Entrar com Google",
+    "noAccount": "Não tem conta?",
+    "signUp": "Cadastrar",
+    "registerTitle": "Criar conta",
+    "registerDescription": "Registre um novo workspace.",
+    "registerSubmit": "Criar conta",
+    "registerSuccess": "Conta criada. Bem-vindo!",
+    "hasAccount": "Já tem conta?",
+    "signIn": "Entrar",
+    "acceptInviteTitle": "Aceitar convite",
+    "acceptInviteDescription": "Defina seu nome e senha para ativar a conta.",
+    "acceptInviteSubmit": "Ativar conta",
+    "inviteAccepted": "Convite aceito. Bem-vindo!",
+    "invalidInvite": "Link de convite inválido.",
+    "inviteCreated": "Convite enviado.",
+    "inviteRevoked": "Convite revogado."
+  },
+  "users": {
+    "title": "Usuários",
+    "description": "Gerencie membros da equipe e convites pendentes.",
+    "inviteTitle": "Convidar usuário",
+    "inviteDescription": "Envie um link de convite para um novo membro.",
+    "emailPlaceholder": "colega@exemplo.com",
+    "role": "Perfil",
+    "roleEditor": "Editor",
+    "roleViewer": "Visualizador",
+    "sendInvite": "Enviar convite",
+    "pendingInvites": "Convites pendentes",
+    "pendingDescription": "Convites que ainda não foram aceitos.",
+    "noInvites": "Nenhum convite pendente.",
+    "expires": "Expira em",
+    "copyUrl": "Copiar link do convite",
+    "revoke": "Revogar",
+    "inviteLinkTitle": "Link de convite criado",
+    "inviteLinkDescription": "Compartilhe este link com o usuário convidado. Ele expira em 48 horas e só pode ser usado uma vez."
+  },
+  "workspace": {
+    "active": "Workspace",
+    "switchSuccess": "Workspace alterado com sucesso.",
+    "joinTitle": "Entrar no workspace",
+    "joinDescription": "Informe seu e-mail para entrar neste workspace.",
+    "joinSubmit": "Entrar no workspace",
+    "joinSuccess": "Você entrou no workspace com sucesso.",
+    "createTitle": "Criar workspace",
+    "createSuccess": "Workspace criado com sucesso.",
+    "workspaceName": "Nome do workspace",
+    "inviteCode": "Código do convite",
+    "emailMustMatch": "O e-mail deve corresponder ao endereço para o qual o convite foi enviado.",
+    "invalidToken": "Link de convite inválido.",
+    "alreadyMember": "Você já é membro deste workspace.",
+    "notFound": "Workspace não encontrado."
+  },
+  "changelog": {
+    "title": "Histórico de mudanças",
+    "subtitle": "Todas as mudanças relevantes no API Cost Shield, da mais recente para a mais antiga.",
+    "tagFeature": "novidade",
+    "tagFix": "correção",
+    "tagSecurity": "segurança",
+    "tagChanged": "mudança",
+    "tagRemoved": "removido"
+  },
+  "allocation": {
+    "title": "Alocação de Custos",
+    "subtitle": "Gasto tabulado por dimensão de tag entre provedores",
+    "tagKeys": "Chaves de tag (separadas por vírgula)",
+    "tagKeysPlaceholder": "team,env",
+    "generate": "Gerar relatório",
+    "grandTotal": "Total geral",
+    "tagKeysAnalyzed": "Chaves analisadas",
+    "rowCount": "Linhas",
+    "empty": "Selecione chaves de tag e gere um relatório.",
+    "total": "Total"
+  },
+  "common": { "loading": "Carregando…", "save": "Salvar", "saving": "Salvando…", "cancel": "Cancelar", "back": "Voltar", "copy": "Copiar", "copied": "Copiado", "actions": "Ações", "apiUp": "API no ar", "apiDown": "API inacessível" },
+  "guide": {
+    "eyebrow": "Documentação",
+    "title": "Guia do Usuário",
+    "subtitle": "Tudo o que você precisa saber para aproveitar ao máximo o API Cost Shield — passo a passo.",
+    "showSteps": "Ver passos",
+    "tipLabel": "Dica rápida:",
+    "tipText": "Comece criando um provedor, depois ative o monitoramento automático ou envie seu primeiro webhook. Em minutos você verá dados reais de custo no Painel.",
+    "footerNote": "Precisa de mais ajuda? Consulte o Histórico de Mudanças para ver os recursos mais recentes ou entre em contato com o administrador do workspace.",
+    "category": {
+      "gettingStarted": "Primeiros passos",
+      "costTracking": "Rastreamento de Custos",
+      "costAnalysis": "Análise de Custos",
+      "teamManagement": "Gestão de Equipe",
+      "security": "Segurança"
+    },
+    "gettingStarted": {
+      "title": "Primeiros Passos",
+      "subtitle": "Registre sua conta, crie um workspace e faça login pela primeira vez.",
+      "step1": { "title": "Crie uma conta", "desc": "Acesse a página de Cadastro, informe seu e-mail, uma senha forte (mín. 8 caracteres, com número e caractere especial), nome de exibição, nome do workspace, fuso horário e moeda base. O primeiro usuário do workspace torna-se admin automaticamente." },
+      "step2": { "title": "Faça login", "desc": "Use seu e-mail e senha na página de Login. Sua sessão é armazenada em um cookie httpOnly seguro — nenhum token é exposto ao JavaScript." },
+      "step3": { "title": "Explore a barra lateral", "desc": "A barra lateral esquerda dá acesso ao Painel, Provedores, Alocação de Custos, Configurações, Usuários (somente admins), Histórico de Mudanças e este Guia do Usuário." },
+      "step4": { "title": "Adicione seu primeiro provedor", "desc": "Vá em Provedores → Adicionar provedor. Preencha o nome, tipo de provedor e tipo de cobrança. Sua chave de API é criptografada antes de ser armazenada no servidor." }
+    },
+    "dashboard": {
+      "title": "Painel",
+      "subtitle": "Monitore o gasto total de API, tendências de crescimento e desempenho por provedor em tempo real.",
+      "step1": { "title": "Leia os cartões de resumo", "desc": "Os quatro cartões no topo mostram: total do mês atual, total do mês anterior, percentual de crescimento vs. mês anterior e a moeda base do workspace." },
+      "step2": { "title": "Filtre por mês", "desc": "Digite um mês no formato aaaa-mm (ex.: 2025-06) no campo Mês para inspecionar dados históricos. Deixe em branco para o mês atual." },
+      "step3": { "title": "Filtre por tag", "desc": "Informe uma Chave de Tag (ex.: 'team') e Valor da Tag (ex.: 'ml-ops') para restringir todos os cartões e gráficos a uma dimensão específica." },
+      "step4": { "title": "Agrupe o gráfico de pizza por tag", "desc": "Digite uma chave de tag em 'Agrupar gráfico por tag' para alternar o gráfico de pizza de provedor para fatias por valor de tag — ideal para comparar gastos por equipe." },
+      "step5": { "title": "Leia o cartão de projeção", "desc": "Quando disponível, o cartão de Projeção mostra uma estimativa linear de gasto até o fim do mês com base na sua taxa diária atual. Use-o para alertas antecipados de orçamento." }
+    },
+    "providers": {
+      "title": "Provedores",
+      "subtitle": "Cadastre e gerencie os serviços de IA / API cujos custos você deseja monitorar.",
+      "step1": { "title": "Adicione um provedor", "desc": "Clique em 'Adicionar provedor', informe um nome de exibição, escolha o tipo de provedor (ex.: openai, aws, stripe, genérico), defina o tipo de cobrança (pós-pago ou pré-pago) e, opcionalmente, adicione uma URL de health check." },
+      "step2": { "title": "Informe sua chave de API", "desc": "Cole sua chave de API do provedor no campo Chave de Acesso. Ela é criptografada com Fernet antes de ser armazenada — trate-a como senha e nunca compartilhe." },
+      "step3": { "title": "Defina um orçamento mensal", "desc": "Na aba Orçamentos, informe um Limite Mensal na sua moeda base. Alertas disparam automaticamente em 80% e 100% do orçamento." },
+      "step4": { "title": "Execute a sonda de saúde", "desc": "Use a aba Saúde para verificar a URL de health do seu provedor sob demanda e confirmar que está acessível." },
+      "step5": { "title": "Visualize faturas", "desc": "A aba Faturas permite registrar snapshots de fatura (início/fim do período, notas, chave de objeto). Eles funcionam como trilha de auditoria permanente do seu histórico de cobrança." },
+      "step6": { "title": "Edite ou atualize", "desc": "Provedores podem ser atualizados a qualquer momento. Credenciais, configuração de polling, tags e limites de orçamento têm abas próprias para edição focada." }
+    },
+    "polling": {
+      "title": "Monitoramento Automático",
+      "subtitle": "Deixe a plataforma buscar custos das APIs dos provedores automaticamente — sem webhooks.",
+      "step1": { "title": "Ative o monitoramento", "desc": "Vá em Provedores → selecione um provedor → aba Sondagem. Ative 'Ativar sondagem automática'. Suportado atualmente: OpenAI (API de uso). Mais adaptadores em desenvolvimento." },
+      "step2": { "title": "Defina o intervalo", "desc": "Informe um intervalo de sondagem em segundos (mínimo 300 s / 5 min). Deixe em branco para usar o padrão global. A plataforma buscará custos nesse intervalo." },
+      "step3": { "title": "Teste a conexão", "desc": "Clique em 'Testar Conexão' para validar que sua chave de API consegue acessar o provedor. Uma mensagem verde de sucesso confirma que as credenciais são válidas." },
+      "step4": { "title": "Monitore a saúde do polling", "desc": "A seção Status da Sondagem mostra o timestamp da última sondagem, falhas consecutivas e hora da próxima tentativa. Na primeira sondagem, 30 dias de dados históricos são preenchidos automaticamente." }
+    },
+    "webhooks": {
+      "title": "Webhooks e Integração",
+      "subtitle": "Envie eventos de custo do Stripe ou de qualquer gateway com assinatura HMAC diretamente para a plataforma.",
+      "step1": { "title": "Encontre suas URLs de webhook", "desc": "Vá em Provedores → selecione um provedor → aba Integração. Você verá uma URL de webhook Stripe e uma URL de webhook HMAC genérico. Copie a relevante." },
+      "step2": { "title": "Configure no lado do provedor", "desc": "Cole a URL no Stripe Dashboard (ou gateway) como endpoint de webhook. Defina o segredo de webhook para corresponder ao armazenado na plataforma." },
+      "step3": { "title": "Verifique com curl", "desc": "A aba Integração fornece um exemplo de curl pronto para o endpoint HMAC genérico e o comando do Stripe CLI. Use-os para enviar um evento de teste e confirmar a ingestão." }
+    },
+    "manualCosts": {
+      "title": "Lançamento Manual de Custo",
+      "subtitle": "Registre linhas de custo avulsas ou corretivas diretamente pela interface, sem webhook.",
+      "step1": { "title": "Abra o formulário manual", "desc": "Vá em Provedores → selecione um provedor → role até a seção 'Lançamento manual de custo' abaixo dos detalhes do provedor." },
+      "step2": { "title": "Preencha o custo", "desc": "Informe o valor na moeda original, o código ISO da moeda (ex.: USD) e, opcionalmente, um objeto JSON de tags (ex.: {\"team\": \"ml-ops\"})." },
+      "step3": { "title": "Registre o custo", "desc": "Clique em 'Registrar custo'. O evento é imediatamente ingerido e aparecerá no seu Painel na próxima atualização de dados." }
+    },
+    "costAllocation": {
+      "title": "Alocação de Custos",
+      "subtitle": "Tabulação cruzada de gastos por dimensões de tag em todos os provedores para entender quem gasta o quê.",
+      "step1": { "title": "Acesse Alocação de Custos", "desc": "Clique em 'Alocação de Custos' na barra lateral. Esta página permite fatiar gastos por múltiplas chaves de tag ao mesmo tempo." },
+      "step2": { "title": "Informe as chaves de tag", "desc": "Digite uma ou mais chaves de tag separadas por vírgula (ex.: 'team,env'). Elas devem corresponder às chaves de tag configuradas nos provedores ou eventos de custo." },
+      "step3": { "title": "Gere o relatório", "desc": "Clique em 'Gerar relatório' (ou pressione Enter). A tabela mostra cada par chave/valor de tag como linha, com uma coluna de gasto por provedor e um total por linha." },
+      "step4": { "title": "Leia os cartões de resumo", "desc": "Três cartões acima da tabela mostram: Total Geral, número de chaves de tag analisadas e contagem de linhas. Use o campo Mês para restringir o relatório a um período de cobrança específico." }
+    },
+    "tags": {
+      "title": "Tags e Rótulos de Custo",
+      "subtitle": "Atribua cada evento de custo a uma equipe, projeto ou ambiente usando um sistema flexível de tags.",
+      "step1": { "title": "Defina tags padrão num provedor", "desc": "Vá em Provedores → selecione um provedor → aba Tags. Informe um objeto JSON como {\"team\": \"ml-ops\", \"env\": \"prod\"}. Todos os eventos de custo deste provedor herdarão essas tags automaticamente." },
+      "step2": { "title": "Substitua tags por evento", "desc": "Ao registrar um custo manual ou enviar um payload de webhook, inclua um campo 'tags'. Valores no nível do evento substituem os padrões do provedor em conflito de chave." },
+      "step3": { "title": "Preencha eventos existentes", "desc": "Alterou as tags padrão? Clique em 'Preencher eventos existentes' na aba Tags para reaplicar as tags atualizadas a todos os eventos históricos daquele provedor. Substituições no nível do evento são preservadas." },
+      "step4": { "title": "Filtre por tags no Painel", "desc": "Use os filtros Chave de Tag e Valor da Tag no Painel para restringir todas as métricas e gráficos a uma dimensão específica (ex.: team=frontend)." }
+    },
+    "budgets": {
+      "title": "Orçamentos e Alertas",
+      "subtitle": "Defina limites de gasto mensais por provedor e seja notificado antes de ultrapassar o orçamento.",
+      "step1": { "title": "Defina um limite mensal", "desc": "Vá em Provedores → selecione um provedor → aba Orçamentos. Informe um Limite Mensal na sua moeda base. Zero ou em branco significa sem limite." },
+      "step2": { "title": "Defina saldo pré-pago", "desc": "Para modelos de cobrança pré-paga, informe o Saldo Pré-pago. A plataforma acompanha o uso em relação a esse saldo." },
+      "step3": { "title": "Limiares de alerta", "desc": "Alertas disparam automaticamente em 80% e 100% do limite mensal. O cartão de projeção no Painel também destacará provedores com tendência de ultrapassar o orçamento." }
+    },
+    "analytics": {
+      "title": "Analytics e Gráficos",
+      "subtitle": "Visualize padrões de gasto com gráficos de pizza, linhas de gasto acumulado e modelos de projeção.",
+      "step1": { "title": "Gráfico de pizza — participação por provedor", "desc": "Mostra a proporção de gasto total de cada provedor no mês selecionado. Passe o mouse nas fatias para valores exatos. Alterne para pizza por tag digitando uma chave de tag em 'Agrupar gráfico por tag'." },
+      "step2": { "title": "Gráfico de linha — acumulado no mês", "desc": "Mostra o gasto acumulado dia a dia no mês atual (ou selecionado). Uma inclinação mais acentuada indica aceleração de gastos." },
+      "step3": { "title": "Cartão de projeção", "desc": "Uma regressão linear sobre o gasto diário prevê o total ao fim do mês. A nota do modelo descreve o nível de confiança. Use-a para intervir cedo se a trajetória ultrapassar o orçamento." }
+    },
+    "settings": {
+      "title": "Configurações",
+      "subtitle": "Configure o nome do workspace, fuso horário, moeda base e operações avançadas.",
+      "step1": { "title": "Atualize detalhes do workspace", "desc": "Na seção Workspace, você pode ver seu Tenant ID ativo e atualizar preferências do workspace." },
+      "step2": { "title": "Altere o idioma", "desc": "Selecione seu idioma preferido (Inglês ou Português) no menu Idioma. A mudança é aplicada imediatamente em toda a interface." },
+      "step3": { "title": "Operações (avançado)", "desc": "A seção de Ops é para administradores. Informe o valor do cabeçalho X-Ops-Secret para acionar rotas de manutenção como rollups mensais e varreduras de alertas. O segredo é armazenado apenas na sessão do navegador." }
+    },
+    "users": {
+      "title": "Usuários e Convites",
+      "subtitle": "Gerencie membros da equipe, perfis e convites pendentes na página Usuários (somente admins).",
+      "step1": { "title": "Convide um membro", "desc": "Vá em Usuários → Convidar usuário. Informe o e-mail do colega e escolha um perfil (Editor ou Visualizador). Clique em 'Enviar convite' para gerar um código de convite seguro de 8 caracteres." },
+      "step2": { "title": "Compartilhe o link de convite", "desc": "Após enviar, um diálogo mostra a URL completa do convite. Compartilhe diretamente com seu colega. Expira em 48 horas e só pode ser resgatado uma vez." },
+      "step3": { "title": "Gerencie convites pendentes", "desc": "A tabela de Convites Pendentes lista todos os convites abertos com horários de expiração. Copie o link novamente ou clique em Revogar para cancelar um convite antes de ser usado." },
+      "step4": { "title": "Entenda os perfis", "desc": "admin: acesso total incluindo gestão de usuários. editor: pode criar/atualizar provedores e registrar custos. viewer: acesso somente leitura a todos os dados. Os perfis são hierárquicos — perfis superiores herdam todas as permissões dos inferiores." }
+    },
+    "workspaces": {
+      "title": "Workspaces",
+      "subtitle": "Crie múltiplos workspaces ou entre em um existente sem criar uma nova conta.",
+      "step1": { "title": "Crie um novo workspace", "desc": "Na seção inferior da barra lateral, clique em 'Criar workspace', informe um nome e confirme. Você torna-se admin do novo workspace automaticamente." },
+      "step2": { "title": "Entre com código de convite", "desc": "Se recebeu um código de convite (não o link completo), cole-o no campo 'Entrar no workspace' na barra lateral e clique no botão de adição." },
+      "step3": { "title": "Alterne entre workspaces", "desc": "Quando você pertence a mais de um workspace, um dropdown aparece na barra lateral. Selecione qualquer workspace para alternar o contexto instantaneamente. Seu JWT é reemitido com o novo workspace ativo." }
+    },
+    "security": {
+      "title": "Visão Geral de Segurança",
+      "subtitle": "Como a plataforma protege seus dados, credenciais e sessões.",
+      "step1": { "title": "Autenticação JWT", "desc": "Tokens de acesso expiram em 15 minutos; tokens de atualização expiram em 7 dias. Ambos são armazenados em cookies httpOnly e SameSite=strict — nunca acessíveis ao JavaScript." },
+      "step2": { "title": "Credenciais criptografadas", "desc": "Todas as chaves de API e segredos de webhook são criptografados com Fernet (AES-128-CBC + HMAC-SHA256) antes de serem gravados no banco de dados. São descriptografados apenas em memória em tempo de execução." },
+      "step3": { "title": "Verificação de webhook HMAC", "desc": "Payloads de webhook recebidos são verificados com HMAC-SHA256 contra o segredo de webhook armazenado. Payloads adulterados ou não assinados são rejeitados automaticamente." }
+    },
+    "credentials": {
+      "title": "Atualização de Credenciais",
+      "subtitle": "Rotacione chaves de API e segredos de webhook de qualquer provedor sem interrupção.",
+      "step1": { "title": "Abra a aba Credenciais", "desc": "Vá em Provedores → selecione um provedor → aba Credenciais. Você verá campos para a Chave de API e o Segredo do Webhook." },
+      "step2": { "title": "Informe novos valores", "desc": "Deixe um campo em branco para manter o valor atual. Somente os campos preenchidos serão atualizados. A nova chave é criptografada antes do armazenamento." },
+      "step3": { "title": "Salve e verifique", "desc": "Clique em 'Atualizar credenciais', depois use o botão Testar Conexão na aba Sondagem para confirmar que a nova chave é válida." }
+    },
+    "changelog": {
+      "title": "Histórico de Mudanças",
+      "subtitle": "Fique atualizado com cada novo recurso, correção e melhoria de segurança.",
+      "step1": { "title": "Leia a linha do tempo", "desc": "A página de Histórico de Mudanças lista cada versão em ordem cronológica inversa. Cada entrada mostra o número da versão, data de lançamento e lista de itens com tags." },
+      "step2": { "title": "Entenda as tags", "desc": "novidade (azul) = nova funcionalidade. correção (âmbar) = correção de bug. segurança (verde) = melhoria de segurança. mudança (roxo) = comportamento modificado. removido (vermelho) = funcionalidade descontinuada/removida." }
+    }
+  }
+}

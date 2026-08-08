@@ -1,0 +1,385 @@
+.shell {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ============ Sidebar (shared by desktop aside + mobile drawer) ============ */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  flex-shrink: 0;
+  border-right: 0.1rem solid rgba(255, 255, 255, 0.07);
+  background: var(--surface);
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+
+  &__brand {
+    padding: 2rem;
+
+    &__name {
+      font-family: var(--font-title);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  &__workspace {
+    margin-top: 1.2rem;
+
+    &__label {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    &__select {
+      margin-top: 0.4rem;
+      width: 100%;
+      border-radius: 0.6rem;
+      border: 0.1rem solid rgba(255, 255, 255, 0.1);
+      background: var(--surface);
+      padding: 0.6rem 1rem;
+      font-size: 1.2rem;
+      color: var(--color-text);
+      backdrop-filter: blur(0.4rem);
+      transition: border-color 0.2s;
+
+      &:focus {
+        outline: none;
+        border-color: rgba(80, 40, 240, 0.5);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+
+    &__meta {
+      margin-top: 0.6rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.1rem;
+      color: var(--muted);
+    }
+  }
+
+  &__identity {
+    margin-top: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+
+    &__name {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    &__roles {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 1.1rem;
+      color: rgba(107, 130, 168, 0.7);
+    }
+  }
+
+  &__divider {
+    margin: 0 1.6rem;
+    height: 0.1rem;
+    background: rgba(255, 255, 255, 0.07);
+  }
+
+  &__nav {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1.2rem;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      border-radius: 0.8rem;
+      padding: 1rem 1.2rem;
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: var(--muted);
+      transition: background-color 0.2s, color 0.2s;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--color-text);
+      }
+
+      &__active {
+        background: rgba(80, 40, 240, 0.1);
+        color: var(--color-text);
+        box-shadow: 0 0.2rem 0.8rem rgba(80, 40, 240, 0.05);
+      }
+    }
+
+    &__icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      transition: color 0.2s;
+
+      &__active {
+        color: #a78bfa;
+      }
+    }
+
+    &__dot {
+      margin-left: auto;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background: var(--violet);
+    }
+  }
+
+  &__bottom {
+    margin-top: auto;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.07);
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__panel {
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+
+    &__label {
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    &__row {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    &__button {
+      flex-shrink: 0;
+      padding: 0 0.8rem;
+    }
+
+    &__icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+
+    &__cancel {
+      width: 100%;
+      height: 2.4rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    height: 3.2rem;
+    border-radius: 0.6rem;
+    border: 0.1rem solid var(--border2);
+    background: var(--surface);
+    padding: 0 1rem;
+    font-size: 1.2rem;
+    color: var(--color-text);
+    transition: border-color 0.2s;
+
+    &::placeholder {
+      color: var(--muted);
+    }
+
+    &:focus {
+      outline: none;
+      border-color: rgba(80, 40, 240, 0.5);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+    }
+  }
+
+  &__action {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    height: 3.2rem;
+    font-size: 1.3rem;
+    color: var(--muted);
+
+    &:hover {
+      color: var(--color-text);
+    }
+
+    &__icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  &__health {
+    padding-top: 0.4rem;
+
+    &__status {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.2rem;
+      color: var(--muted);
+    }
+
+    &__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+
+      &__up {
+        color: var(--cyan);
+      }
+
+      &__down {
+        color: var(--destructive);
+      }
+    }
+  }
+}
+
+/* ============ Mobile drawer (only rendered when open) ============ */
+
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: block;
+
+  &__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.4rem);
+  }
+
+  &__panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 18rem;
+    background: var(--surface);
+    box-shadow: 0 0 4rem rgba(80, 40, 240, 0.1);
+    overflow-y: auto;
+  }
+
+  &__close {
+    position: absolute;
+    right: 1.2rem;
+    top: 1.2rem;
+
+    &__icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+}
+
+/* ============ Main area ============ */
+
+.main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+
+  &__content {
+    flex: 1;
+    padding: 4rem;
+
+    @include tablet {
+      padding: 1.6rem;
+    }
+    @include mobile {
+      padding: 1.2rem;
+    }
+  }
+}
+
+.header {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.07);
+  background: rgba(0, 20, 40, 0.8);
+  padding: 1.2rem 1.6rem;
+  backdrop-filter: blur(0.8rem);
+
+  @include tablet {
+    display: flex;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  &__brand {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  &__health {
+    &__icon {
+      width: 1.2rem;
+      height: 1.2rem;
+
+      &__up {
+        color: var(--cyan);
+      }
+
+      &__down {
+        color: var(--destructive);
+      }
+    }
+  }
+}
+
+/* Desktop sidebar hidden below tablet breakpoint */
+@include tablet {
+  .sidebar {
+    display: none;
+  }
+}

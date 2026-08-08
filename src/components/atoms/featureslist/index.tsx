@@ -25,6 +25,6 @@ const Feature = forwardRef<HTMLLIElement, FeaturesProps>(({ title, children }, r
   );
 });
 
-
+Feature.displayName = "Feature";
 
 Features.Item = Feature;

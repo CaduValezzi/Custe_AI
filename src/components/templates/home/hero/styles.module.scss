@@ -91,14 +91,18 @@
     font-size: 1.6rem;
     font-weight: 500;
     
-    button{
+    button, a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background-color: transparent;
       border-radius: 1rem;
-      padding: 1.4rem 3.2rem; 
+      padding: 1.4rem 3.2rem;
       cursor: pointer;
       transition: ease-in-out 200ms;
       color: var(--color-text);
       z-index: 0;
+      text-decoration: none;
     }
     
       &__especial{
@@ -129,9 +133,6 @@
       border-radius: 2rem;
     } 
   }
-}
-.demodash__container{
-  width: 100%;
 }
 @media (max-width: 426px) {
   .hero {

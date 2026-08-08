@@ -3,6 +3,85 @@
 @import '../styles/_fonts.scss';
 @import '../styles/_variables.scss';
 
+/* ============================================================
+   B1 — Brand design-token layer.
+
+   Maps the /frontend brand tokens (_colors.scss / _fonts.scss)
+   onto the shadcn semantic contract that the ported ui/* primitives
+   (from mock_frontend) consume via Tailwind utility classes.
+   Tailwind v4 generates utilities from the `@theme inline` block;
+   the `:root` aliases below expose the same values to hand-written
+   SCSS. We deliberately do NOT redefine the existing `--muted`
+   (muted text #6B82A8) or `--border` (#ffffff12) vars — the semantic
+   *surface* uses --surface2 and the semantic *border* reuses the
+   brand value directly.
+   ============================================================ */
+:root {
+  /* shadcn semantic contract (aliases onto brand tokens) */
+  --background: var(--bg);
+  --foreground: var(--color-text);
+  --card: var(--surface);
+  --card-foreground: var(--color-text);
+  --popover: var(--surface2);
+  --popover-foreground: var(--color-text);
+  --primary: var(--violet);
+  --primary-foreground: var(--white);
+  --secondary: var(--surface2);
+  --secondary-foreground: var(--color-text);
+  --accent: var(--cyan);
+  --accent-foreground: var(--bg);
+  --destructive: var(--destructive);
+  --destructive-foreground: var(--white);
+  --ring: var(--violet);
+  --input: var(--border2);
+  --radius: 0.75rem;
+  --radius-lg: 1.25rem;
+}
+
+@theme inline {
+  /* surfaces + text */
+  --color-background: var(--bg);
+  --color-foreground: var(--color-text);
+  --color-card: var(--surface);
+  --color-card-foreground: var(--color-text);
+  --color-popover: var(--surface2);
+  --color-popover-foreground: var(--color-text);
+  --color-muted: var(--surface2);            /* muted SURFACE (brand has --muted as text) */
+  --color-muted-foreground: var(--muted);    /* #6B82A8 muted text */
+  --color-border: var(--border);             /* #ffffff12 */
+  --color-input: var(--border2);             /* #ffffff21 */
+  --color-ring: var(--violet);
+
+  /* actions */
+  --color-primary: var(--violet);
+  --color-primary-foreground: var(--white);
+  --color-secondary: var(--surface2);
+  --color-secondary-foreground: var(--color-text);
+  --color-accent: var(--cyan);
+  --color-accent-foreground: var(--bg);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--white);
+
+  /* brand accents (bg-violet/10, text-cyan, surface-2, …) */
+  --color-violet: var(--violet);
+  --color-violet-light: #a78bfa;
+  --color-cyan: var(--cyan);
+  --color-cyan-light: #5eead4;
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface2);
+
+  /* fonts (mock: sans=Figtree, serif=DM Serif Display, mono=DM Mono) */
+  --font-sans: var(--font-text);
+  --font-serif: var(--font-title);
+  --font-mono: var(--font-mocked);
+
+  /* radii (mirror mock tailwind.config: lg=--radius, xl=--radius-lg) */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: var(--radius-lg);
+}
+
 
  * {
   box-sizing: border-box;

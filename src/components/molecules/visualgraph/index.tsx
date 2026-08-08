@@ -1,8 +1,8 @@
 import S from "./style.module.scss"
 
-export const VisualGraph = ({ className }: { className?: string }) => {
+export const VisualGraph = () => {
     return(
-        <div className={`${S["feature-visual"]} ${className || ""}`}>
+        <div className={S["feature-visual"]}>
             <div className={S["chart-title"]}>Distribuicao de gastos &mdash;
                 Junho 2026</div>
             <div className={S["pie-wrap"]}>

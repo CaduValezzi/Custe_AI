@@ -15,3 +15,5 @@ export const Sub = forwardRef<HTMLParagraphElement, SubProps>(({ children }, ref
   );
 });
 
+Sub.displayName = "Sub";
+

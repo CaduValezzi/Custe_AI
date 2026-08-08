@@ -1,40 +1,46 @@
+"use client";
+
+import Link from "next/link";
+import { useTranslation, Trans } from "react-i18next";
+import { Demodash } from "@/components/molecules/demodash";
 import { Section } from "@/components/organisms/section";
 import S from "./styles.module.scss"
-import { Demodash } from "@/components/molecules/demodash";
-
-const scrollTo = (id: string) => (e: React.MouseEvent) => {
-  e.preventDefault();
-  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-};
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <>
       <Section className={S.hero__container} id="hero">
           <div className={S.hero__badge}>
               <span className={S.hero__badge__dot}></span>
-              FIAP 2026
+              {t("landing.hero.badge")}
             </div>
           <div className={S.hero__content}>
+
+
             <div className={S.hero__info}>
               <h1 className={S.hero__headline}>
-                Pare de perder dinheiro<br/>com <span className={S.hero__headline__span}>APIs que você<br/>nem lembra que usa</span>
+                <Trans
+                  i18nKey="landing.hero.headline"
+                  components={{
+                    br: <br />,
+                    span: <span className={S.hero__headline__span} />,
+                  }}
+                />
               </h1>
 
               <p className={S.hero__description}>
-                O Custe.AI centraliza todos os seus gastos com APIs de terceiros em um unico dashboard — com alertas automaticos, historico e projecao de custos.
+                {t("landing.hero.description")}
               </p>
 
               <div className={S.hero__actions}>
-                <button  className={S.hero__actions__especial}>Ver como funciona →</button>
-                <button onClick={scrollTo("demodash")} className={S.hero__actions__ghost}>Ver dashboard</button>
+                <Link href="/register" className={S.hero__actions__especial}>{t("landing.hero.ctaPrimary")}</Link>
+                <Link href="/login" className={S.hero__actions__ghost} >{t("landing.hero.ctaSecondary")}</Link>
               </div>
             </div>
           </div>
-          <div className={S.demodash__container} id="demodash">
-            <Demodash />
-          </div>
+          <Demodash />
       </Section>
     </>
   )
-}; 
+};

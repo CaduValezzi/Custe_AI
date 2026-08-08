@@ -1,0 +1,25 @@
+.glow {
+  position: absolute;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+
+  &__violet {
+    position: absolute;
+    top: -16rem;
+    left: 33%;
+    height: 50rem;
+    width: 50rem;
+    background: radial-gradient(ellipse, rgba(80, 40, 240, 0.15) 0%, transparent 70%);
+  }
+
+  &__cyan {
+    position: absolute;
+    bottom: 0;
+    right: 25%;
+    height: 40rem;
+    width: 40rem;
+    background: radial-gradient(ellipse, rgba(0, 180, 160, 0.1) 0%, transparent 70%);
+  }
+}

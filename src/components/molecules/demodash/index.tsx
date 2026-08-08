@@ -85,3 +85,5 @@ export const Demodash = forwardRef<HTMLDivElement>((_, ref) => {
   </div>
   );
 });
+
+Demodash.displayName = "Demodash";

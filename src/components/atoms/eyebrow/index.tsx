@@ -12,4 +12,6 @@ export const Eyebrow = forwardRef<HTMLDivElement, EyebrowProps>(({ children }, r
       {children}
     </div>
   );
-})
+});
+
+Eyebrow.displayName = "Eyebrow";

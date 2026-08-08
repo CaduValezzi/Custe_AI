@@ -1,0 +1,55 @@
+.forgot {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.8rem;
+  }
+
+  &__title {
+    font-family: var(--font-title);
+    font-size: clamp(2.4rem, 3vw, 3.2rem);
+    color: var(--color-text);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.8rem;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    color: var(--muted);
+    line-height: 1.7;
+    padding: 1.6rem;
+    border: 0.1rem solid var(--border);
+    border-radius: 1.2rem;
+    background: var(--surface);
+  }
+
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: var(--font-text);
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s, gap 0.2s;
+
+    &:hover {
+      color: var(--color-text);
+    }
+
+    &__arrow {
+      font-size: 1.6rem;
+      transition: transform 0.2s;
+    }
+
+    &:hover &__arrow {
+      transform: translateX(-0.3rem);
+    }
+  }
+}
