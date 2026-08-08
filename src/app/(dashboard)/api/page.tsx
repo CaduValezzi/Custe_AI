@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { DashboardLayout } from "@/components/templates/dashboardlayout";
 import { ApiTable, type ApiRow } from "@/components/molecules/apitable";
 import { SearchInput } from "@/components/atoms/searchinput";
 import S from "./styles.module.scss";
+import { DashboardLayout } from "@/templates/dashboardlayout";
 
 const mockApis: ApiRow[] = [
   { id: "1", nome: "OpenAI GPT-4", custoMensal: "R$ 1.840", custoAnual: "R$ 22.080", provedor: "OpenAI", limite: "R$ 2.000", percentual: 92 },

@@ -1,3 +1,4 @@
+'use client'
 import { Section } from "@/components/organisms/section";
 import S from "./styles.module.scss"
 import { Demodash } from "@/components/molecules/demodash";

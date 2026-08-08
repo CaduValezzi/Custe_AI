@@ -1,7 +1,8 @@
-import { HomeTemplate } from "@/components/templates/home";
+import { PageLayout } from "@/templates/pagelayout";
+
 
 export default function Home() {
   return (
-    <HomeTemplate />
+    <PageLayout />
   );
 }

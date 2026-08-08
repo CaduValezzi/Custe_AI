@@ -1,3 +1,4 @@
+'use client'
 import { Title } from "@/components/atoms/title";
 import { Section } from "@/components/organisms/section";
 import { problems } from "./const"

@@ -1,3 +1,4 @@
+'use client'
 import { Section } from "@/components/organisms/section";
 import { Eyebrow } from "@/components/atoms/eyebrow";
 import { Sub } from "@/components/atoms/sub";
